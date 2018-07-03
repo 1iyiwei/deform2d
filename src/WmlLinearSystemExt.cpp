@@ -2,6 +2,7 @@
 
 #include "rmsdebug.h"
 #include <limits>
+#include <algorithm>
 
 using namespace Wml;
 
