@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{EAF909A5-FA59-4C3D-9431-0FCC20D5BCF9}") = "WildMagic2", "WildMagic2.icproj", "{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		DebugDLL = DebugDLL
+		Release = Release
+		ReleaseDLL = ReleaseDLL
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.Debug.ActiveCfg = Debug|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.Debug.Build.0 = Debug|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.DebugDLL.ActiveCfg = DebugDLL|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.DebugDLL.Build.0 = DebugDLL|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.Release.ActiveCfg = Release|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.Release.Build.0 = Release|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.ReleaseDLL.ActiveCfg = ReleaseDLL|Win32
+		{71F6EBE0-89AF-4C9C-AD84-86D47AE7B6DC}.ReleaseDLL.Build.0 = ReleaseDLL|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.ReleaseDLL.Build.0 = ReleaseDLL|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.ReleaseDLL.ActiveCfg = ReleaseDLL|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.Release.Build.0 = Release|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.Release.ActiveCfg = Release|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.DebugDLL.Build.0 = DebugDLL|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.DebugDLL.ActiveCfg = DebugDLL|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.Debug.Build.0 = Debug|Win32
+		{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}.Debug.ActiveCfg = Debug|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
