@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>15.0.26919.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Release\</OutDir>
+    <IntDir>Debug\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Release\</OutDir>
+    <IntDir>Release\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <OutDir>..\Library\DebugDLL\</OutDir>
+    <IntDir>DebugDLL\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <OutDir>..\Library\ReleaseDLL\</OutDir>
+    <IntDir>ReleaseDLL\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Approximation;Containment;Curves;Distance;Geometry;Graphics;ImageAnalysis;Interpolation;Intersection;Math;Meshes;Numerics;RationalArithmetic;Surfaces;System;Tessellation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation />
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)WildMagic2.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>copy Approximation\*.h ..\Include
+copy Containment\*.h ..\Include
+copy Curves\*.h ..\Include
+copy Distance\*.h ..\Include
+copy Geometry\*.h ..\Include
+copy Graphics\*.h ..\Include
+copy Graphics\*.inl ..\Include
+copy Graphics\*.mcr ..\Include
+copy ImageAnalysis\*.h ..\Include
+copy ImageAnalysis\*.inl ..\Include
+copy Interpolation\*.h ..\Include
+copy Intersection\*.h ..\Include
+copy Math\*.h ..\Include
+copy Math\*.inl ..\Include
+copy Meshes\*.h ..\Include
+copy Meshes\*.inl ..\Include
+copy Miscellaneous\*.h ..\Include
+copy Numerics\*.h ..\Include
+copy Numerics\*.inl ..\Include
+copy RationalArithmetic\*.h ..\Include
+copy RationalArithmetic\*.inl ..\Include
+copy Surfaces\*.h ..\Include
+copy System\*.h ..\Include
+copy System\*.inl ..\Include
+copy System\*.mcr ..\Include
+copy Tessellation\*.h ..\Include
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>Approximation;Containment;Curves;Distance;Geometry;Graphics;ImageAnalysis;Interpolation;Intersection;Math;Meshes;Numerics;RationalArithmetic;Surfaces;System;Tessellation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation />
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Lib>
+      <OutputFile>$(OutDir)WildMagic2.lib</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Lib>
+    <PostBuildEvent>
+      <Command>copy Approximation\*.h ..\Include
+copy Containment\*.h ..\Include
+copy Curves\*.h ..\Include
+copy Distance\*.h ..\Include
+copy Geometry\*.h ..\Include
+copy Graphics\*.h ..\Include
+copy Graphics\*.inl ..\Include
+copy Graphics\*.mcr ..\Include
+copy ImageAnalysis\*.h ..\Include
+copy ImageAnalysis\*.inl ..\Include
+copy Interpolation\*.h ..\Include
+copy Intersection\*.h ..\Include
+copy Math\*.h ..\Include
+copy Math\*.inl ..\Include
+copy Meshes\*.h ..\Include
+copy Meshes\*.inl ..\Include
+copy Miscellaneous\*.h ..\Include
+copy Numerics\*.h ..\Include
+copy Numerics\*.inl ..\Include
+copy RationalArithmetic\*.h ..\Include
+copy RationalArithmetic\*.inl ..\Include
+copy Surfaces\*.h ..\Include
+copy System\*.h ..\Include
+copy System\*.inl ..\Include
+copy System\*.mcr ..\Include
+copy Tessellation\*.h ..\Include
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Approximation;Containment;Curves;Distance;Geometry;Graphics;ImageAnalysis;Interpolation;Intersection;Math;Meshes;Numerics;RationalArithmetic;Surfaces;System;Tessellation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;WML_DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation />
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)WildMagic2.dll</OutputFile>
+      <ImportLibrary>$(OutDir)WildMagic2.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy Approximation\*.h ..\Include
+copy Containment\*.h ..\Include
+copy Curves\*.h ..\Include
+copy Distance\*.h ..\Include
+copy Geometry\*.h ..\Include
+copy Graphics\*.h ..\Include
+copy Graphics\*.inl ..\Include
+copy Graphics\*.mcr ..\Include
+copy ImageAnalysis\*.h ..\Include
+copy ImageAnalysis\*.inl ..\Include
+copy Interpolation\*.h ..\Include
+copy Intersection\*.h ..\Include
+copy Math\*.h ..\Include
+copy Math\*.inl ..\Include
+copy Meshes\*.h ..\Include
+copy Meshes\*.inl ..\Include
+copy Miscellaneous\*.h ..\Include
+copy Numerics\*.h ..\Include
+copy Numerics\*.inl ..\Include
+copy RationalArithmetic\*.h ..\Include
+copy RationalArithmetic\*.inl ..\Include
+copy Surfaces\*.h ..\Include
+copy System\*.h ..\Include
+copy System\*.inl ..\Include
+copy System\*.mcr ..\Include
+copy Tessellation\*.h ..\Include
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>Approximation;Containment;Curves;Distance;Geometry;Graphics;ImageAnalysis;Interpolation;Intersection;Math;Meshes;Numerics;RationalArithmetic;Surfaces;System;Tessellation;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;WML_DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <PrecompiledHeaderFile />
+      <PrecompiledHeaderOutputFile>$(IntDir)$(TargetName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation />
+      <ObjectFileName>$(IntDir)</ObjectFileName>
+      <ProgramDataBaseFileName>$(IntDir)vc70.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <CompileAs>Default</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>$(OutDir)WildMagic2.dll</OutputFile>
+      <ImportLibrary>$(OutDir)WildMagic2.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy Approximation\*.h ..\Include
+copy Containment\*.h ..\Include
+copy Curves\*.h ..\Include
+copy Distance\*.h ..\Include
+copy Geometry\*.h ..\Include
+copy Graphics\*.h ..\Include
+copy Graphics\*.inl ..\Include
+copy Graphics\*.mcr ..\Include
+copy ImageAnalysis\*.h ..\Include
+copy ImageAnalysis\*.inl ..\Include
+copy Interpolation\*.h ..\Include
+copy Intersection\*.h ..\Include
+copy Math\*.h ..\Include
+copy Math\*.inl ..\Include
+copy Meshes\*.h ..\Include
+copy Meshes\*.inl ..\Include
+copy Miscellaneous\*.h ..\Include
+copy Numerics\*.h ..\Include
+copy Numerics\*.inl ..\Include
+copy RationalArithmetic\*.h ..\Include
+copy RationalArithmetic\*.inl ..\Include
+copy Surfaces\*.h ..\Include
+copy System\*.h ..\Include
+copy System\*.inl ..\Include
+copy System\*.mcr ..\Include
+copy Tessellation\*.h ..\Include
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Approximation\WmlApprCircleFit2.cpp" />
+    <ClCompile Include="Approximation\WmlApprCylinderFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprEllipseByArcs2.cpp" />
+    <ClCompile Include="Approximation\WmlApprEllipseFit2.cpp" />
+    <ClCompile Include="Approximation\WmlApprEllipsoidFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprGaussPointsFit2.cpp" />
+    <ClCompile Include="Approximation\WmlApprGaussPointsFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprLineFit2.cpp" />
+    <ClCompile Include="Approximation\WmlApprLineFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprParaboloidFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprPlaneFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprPolyFit1.cpp" />
+    <ClCompile Include="Approximation\WmlApprPolyFit2.cpp" />
+    <ClCompile Include="Approximation\WmlApprPolyFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprQuadraticFit2.cpp" />
+    <ClCompile Include="Approximation\WmlApprQuadraticFit3.cpp" />
+    <ClCompile Include="Approximation\WmlApprSphereFit3.cpp" />
+    <ClCompile Include="Containment\WmlContBox2.cpp" />
+    <ClCompile Include="Containment\WmlContBox3.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContCapsule3.cpp" />
+    <ClCompile Include="Containment\WmlContCylinder3.cpp" />
+    <ClCompile Include="Containment\WmlContEllipse2.cpp" />
+    <ClCompile Include="Containment\WmlContEllipsoid3.cpp" />
+    <ClCompile Include="Containment\WmlContLozenge3.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinBox2.cpp" />
+    <ClCompile Include="Containment\WmlContMinBox3.cpp" />
+    <ClCompile Include="Containment\WmlContMinCircle2.cpp" />
+    <ClCompile Include="Containment\WmlContMinEllipseCR2.cpp" />
+    <ClCompile Include="Containment\WmlContMinEllipsoidCR3.cpp" />
+    <ClCompile Include="Containment\WmlContMinSphere3.cpp" />
+    <ClCompile Include="Containment\WmlContPointInPolygon2.cpp" />
+    <ClCompile Include="Containment\WmlContScribeCir2.cpp" />
+    <ClCompile Include="Containment\WmlContScribeCir3Sph3.cpp" />
+    <ClCompile Include="Containment\WmlContSeparatePoints2.cpp" />
+    <ClCompile Include="Containment\WmlContSeparatePoints3.cpp" />
+    <ClCompile Include="Containment\WmlContSphere3.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlConvexHull2.cpp" />
+    <ClCompile Include="Containment\WmlConvexHull3.cpp" />
+    <ClCompile Include="Curves\WmlBezierCurve2.cpp" />
+    <ClCompile Include="Curves\WmlBezierCurve3.cpp" />
+    <ClCompile Include="Curves\WmlBSplineBasis.cpp" />
+    <ClCompile Include="Curves\WmlBSplineCurve2.cpp" />
+    <ClCompile Include="Curves\WmlBSplineCurve3.cpp" />
+    <ClCompile Include="Curves\WmlBSplineReduction.cpp" />
+    <ClCompile Include="Curves\WmlCubicPolynomialCurve2.cpp" />
+    <ClCompile Include="Curves\WmlCubicPolynomialCurve3.cpp" />
+    <ClCompile Include="Curves\WmlCurve2.cpp" />
+    <ClCompile Include="Curves\WmlCurve3.cpp" />
+    <ClCompile Include="Curves\WmlMultipleCurve2.cpp" />
+    <ClCompile Include="Curves\WmlMultipleCurve3.cpp" />
+    <ClCompile Include="Curves\WmlNaturalSpline2.cpp" />
+    <ClCompile Include="Curves\WmlNaturalSpline3.cpp" />
+    <ClCompile Include="Curves\WmlNURBSCurve2.cpp" />
+    <ClCompile Include="Curves\WmlNURBSCurve3.cpp" />
+    <ClCompile Include="Curves\WmlPolynomialCurve2.cpp" />
+    <ClCompile Include="Curves\WmlPolynomialCurve3.cpp" />
+    <ClCompile Include="Curves\WmlSingleCurve2.cpp" />
+    <ClCompile Include="Curves\WmlSingleCurve3.cpp" />
+    <ClCompile Include="Curves\WmlTCBSpline2.cpp" />
+    <ClCompile Include="Curves\WmlTCBSpline3.cpp" />
+    <ClCompile Include="Distance\WmlDistCir3Cir3.cpp" />
+    <ClCompile Include="Distance\WmlDistEllipsoidGeodesic.cpp" />
+    <ClCompile Include="Distance\WmlDistLin3Box3.cpp" />
+    <ClCompile Include="Distance\WmlDistLin3Cir3.cpp" />
+    <ClCompile Include="Distance\WmlDistLin3Lin3.cpp" />
+    <ClCompile Include="Distance\WmlDistLin3Rct3.cpp" />
+    <ClCompile Include="Distance\WmlDistLin3Tri3.cpp" />
+    <ClCompile Include="Distance\WmlDistRct3Rct3.cpp" />
+    <ClCompile Include="Distance\WmlDistTri3Rct3.cpp" />
+    <ClCompile Include="Distance\WmlDistTri3Tri3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec2Elp2.cpp" />
+    <ClCompile Include="Distance\WmlDistVec2Lin2.cpp" />
+    <ClCompile Include="Distance\WmlDistVec2Qdr2.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Box3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Cir3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Eld3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Fru3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Lin3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Pln3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Qdr3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Rct3.cpp" />
+    <ClCompile Include="Distance\WmlDistVec3Tri3.cpp" />
+    <ClCompile Include="Geometry\WmlArc2.cpp" />
+    <ClCompile Include="Geometry\WmlAxisAlignedBox2.cpp" />
+    <ClCompile Include="Geometry\WmlAxisAlignedBox3.cpp" />
+    <ClCompile Include="Geometry\WmlBox2.cpp" />
+    <ClCompile Include="Geometry\WmlBox3.cpp" />
+    <ClCompile Include="Geometry\WmlCapsule3.cpp" />
+    <ClCompile Include="Geometry\WmlCircle2.cpp" />
+    <ClCompile Include="Geometry\WmlCircle3.cpp" />
+    <ClCompile Include="Geometry\WmlCone3.cpp" />
+    <ClCompile Include="Geometry\WmlConvexClipper.cpp" />
+    <ClCompile Include="Geometry\WmlConvexPolygon2.cpp" />
+    <ClCompile Include="Geometry\WmlConvexPolyhedron3.cpp" />
+    <ClCompile Include="Geometry\WmlCylinder3.cpp" />
+    <ClCompile Include="Geometry\WmlDisk2.cpp" />
+    <ClCompile Include="Geometry\WmlDisk3.cpp" />
+    <ClCompile Include="Geometry\WmlEllipse2.cpp" />
+    <ClCompile Include="Geometry\WmlEllipsoid3.cpp" />
+    <ClCompile Include="Geometry\WmlFrustum3.cpp" />
+    <ClCompile Include="Geometry\WmlHalfSpace3.cpp" />
+    <ClCompile Include="Geometry\WmlLine2.cpp" />
+    <ClCompile Include="Geometry\WmlLine3.cpp" />
+    <ClCompile Include="Geometry\WmlLozenge3.cpp" />
+    <ClCompile Include="Geometry\WmlPlane3.cpp" />
+    <ClCompile Include="Geometry\WmlRay2.cpp" />
+    <ClCompile Include="Geometry\WmlRay3.cpp" />
+    <ClCompile Include="Geometry\WmlRectangle3.cpp" />
+    <ClCompile Include="Geometry\WmlSegment2.cpp" />
+    <ClCompile Include="Geometry\WmlSegment3.cpp" />
+    <ClCompile Include="Geometry\WmlSphere3.cpp" />
+    <ClCompile Include="Geometry\WmlTetrahedron3.cpp" />
+    <ClCompile Include="Geometry\WmlTorus3.cpp" />
+    <ClCompile Include="Geometry\WmlTriangle2.cpp" />
+    <ClCompile Include="Geometry\WmlTriangle3.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlBinary2D.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlBinary3D.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlElement.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlExtractSurfaceCubes.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlExtractSurfaceTetra.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlFastBlur.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlImageConvert.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlImages.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlLattice.cpp" />
+    <ClCompile Include="ImageAnalysis\WmlRasterDrawing.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpAkima1.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpAkimaNonuniform1.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpAkimaUniform1.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpAkimaUniform2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpAkimaUniform3.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBicubic2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBilinear2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform1.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform3.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform4.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniformN.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpLinearNonuniform2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpLinearNonuniform3.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpQdrNonuniform2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpSphere2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpThinPlateSpline2.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpThinPlateSpline3.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpTricubic3.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpTrilinear3.cpp" />
+    <ClCompile Include="Interpolation\WmlIntpVectorField2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrBox2Box2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrBox3Box3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrBox3Fru3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrBox3Sph3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrCap3Cap3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrCir2Box2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrCir2Cir2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrElp2Elp2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrHsp3Box3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrHsp3Lin3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrHsp3Sph3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrHsp3Tri3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrInterval.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin2Box2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin2Cir2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin2Lin2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Box3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Cap3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Con3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Cyl3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Eld3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Loz3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Sph3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Tor3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLin3Tri3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrLoz3Loz3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Box3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Cap3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Cyl3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Eld3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Loz3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Pln3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrPln3Sph3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrSph3Con3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrSph3Fru3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrSph3Sph3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrTet3Tet3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrTri2Tri2.cpp" />
+    <ClCompile Include="Intersection\WmlIntrTri3Box3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrTri3Con3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrTri3Sph3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrTri3Tri3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrUtility3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrUtilityBox3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrUtilityLin3.cpp" />
+    <ClCompile Include="Intersection\WmlIntrUtilityTri3.cpp" />
+    <ClCompile Include="Math\WmlBandedMatrix.cpp" />
+    <ClCompile Include="Math\WmlGMatrix.cpp" />
+    <ClCompile Include="Math\WmlGVector.cpp" />
+    <ClCompile Include="Math\WmlMath.cpp" />
+    <ClCompile Include="Math\WmlMatrix2.cpp" />
+    <ClCompile Include="Math\WmlMatrix3.cpp" />
+    <ClCompile Include="Math\WmlMatrix4.cpp" />
+    <ClCompile Include="Math\WmlPoint2.cpp" />
+    <ClCompile Include="Math\WmlPoint3.cpp" />
+    <ClCompile Include="Math\WmlPoint4.cpp" />
+    <ClCompile Include="Math\WmlPolynomial1.cpp" />
+    <ClCompile Include="Math\WmlQuaternion.cpp" />
+    <ClCompile Include="Math\WmlVector2.cpp" />
+    <ClCompile Include="Math\WmlVector3.cpp" />
+    <ClCompile Include="Math\WmlVector4.cpp" />
+    <ClCompile Include="Meshes\WmlBasicMesh.cpp" />
+    <ClCompile Include="Meshes\WmlConformalMap.cpp" />
+    <ClCompile Include="Meshes\WmlETManifoldMesh.cpp" />
+    <ClCompile Include="Meshes\WmlETNonmanifoldMesh.cpp" />
+    <ClCompile Include="Meshes\WmlMeshCurvature.cpp" />
+    <ClCompile Include="Meshes\WmlMeshSmoother.cpp" />
+    <ClCompile Include="Meshes\WmlMTEdge.cpp" />
+    <ClCompile Include="Meshes\WmlMTMesh.cpp" />
+    <ClCompile Include="Meshes\WmlMTTriangle.cpp" />
+    <ClCompile Include="Meshes\WmlMTVertex.cpp" />
+    <ClCompile Include="Meshes\WmlVEMesh.cpp" />
+    <ClCompile Include="Meshes\WmlVETMesh.cpp" />
+    <ClCompile Include="Miscellaneous\WmlNormalCompression.cpp" />
+    <ClCompile Include="Miscellaneous\WmlPerspProjEllipsoid.cpp" />
+    <ClCompile Include="Miscellaneous\WmlQuadToQuadTransforms.cpp" />
+    <ClCompile Include="Miscellaneous\WmlRandomHypersphere.cpp" />
+    <ClCompile Include="Numerics\WmlBisect1.cpp" />
+    <ClCompile Include="Numerics\WmlBisect2.cpp" />
+    <ClCompile Include="Numerics\WmlBisect3.cpp" />
+    <ClCompile Include="Numerics\WmlEigen.cpp" />
+    <ClCompile Include="Numerics\WmlIntegrate1.cpp" />
+    <ClCompile Include="Numerics\WmlLinearSystem.cpp" />
+    <ClCompile Include="Numerics\WmlMinimize1.cpp" />
+    <ClCompile Include="Numerics\WmlMinimizeN.cpp" />
+    <ClCompile Include="Numerics\WmlOdeEuler.cpp" />
+    <ClCompile Include="Numerics\WmlOdeMidpoint.cpp" />
+    <ClCompile Include="Numerics\WmlOdeRungeKutta4.cpp" />
+    <ClCompile Include="Numerics\WmlOdeSolver.cpp" />
+    <ClCompile Include="Numerics\WmlPolynomialRoots.cpp" />
+    <ClCompile Include="RationalArithmetic\WmlRVector2.cpp" />
+    <ClCompile Include="RationalArithmetic\WmlRVector3.cpp" />
+    <ClCompile Include="RationalArithmetic\WmlTInteger.cpp" />
+    <ClCompile Include="RationalArithmetic\WmlTRational.cpp" />
+    <ClCompile Include="Surfaces\WmlBSplineRectangle.cpp" />
+    <ClCompile Include="Surfaces\WmlImplicitSurface.cpp" />
+    <ClCompile Include="Surfaces\WmlNURBSRectangle.cpp" />
+    <ClCompile Include="Surfaces\WmlParametricSurface.cpp" />
+    <ClCompile Include="Surfaces\WmlQuadricSurface.cpp" />
+    <ClCompile Include="Surfaces\WmlSurface.cpp" />
+    <ClCompile Include="System\WmlCommand.cpp" />
+    <ClCompile Include="System\WmlSystem.cpp" />
+    <ClCompile Include="System\WmlWinSystem.cpp" />
+    <ClCompile Include="Tessellation\WmlDelaunay2.cpp" />
+    <ClCompile Include="Tessellation\WmlDelaunay2a.cpp" />
+    <ClCompile Include="Tessellation\WmlDelaunay3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Approximation\WmlApprCircleFit2.h" />
+    <ClInclude Include="Approximation\WmlApprCylinderFit3.h" />
+    <ClInclude Include="Approximation\WmlApprEllipseByArcs2.h" />
+    <ClInclude Include="Approximation\WmlApprEllipseFit2.h" />
+    <ClInclude Include="Approximation\WmlApprEllipsoidFit3.h" />
+    <ClInclude Include="Approximation\WmlApprGaussPointsFit2.h" />
+    <ClInclude Include="Approximation\WmlApprGaussPointsFit3.h" />
+    <ClInclude Include="Approximation\WmlApprLineFit2.h" />
+    <ClInclude Include="Approximation\WmlApprLineFit3.h" />
+    <ClInclude Include="Approximation\WmlApprParaboloidFit3.h" />
+    <ClInclude Include="Approximation\WmlApprPlaneFit3.h" />
+    <ClInclude Include="Approximation\WmlApprPolyFit1.h" />
+    <ClInclude Include="Approximation\WmlApprPolyFit2.h" />
+    <ClInclude Include="Approximation\WmlApprPolyFit3.h" />
+    <ClInclude Include="Approximation\WmlApprQuadraticFit2.h" />
+    <ClInclude Include="Approximation\WmlApprQuadraticFit3.h" />
+    <ClInclude Include="Approximation\WmlApprSphereFit3.h" />
+    <ClInclude Include="Containment\WmlContBox2.h" />
+    <ClInclude Include="Containment\WmlContBox3.h" />
+    <ClInclude Include="Containment\WmlContCapsule3.h" />
+    <ClInclude Include="Containment\WmlContCylinder3.h" />
+    <ClInclude Include="Containment\WmlContEllipse2.h" />
+    <ClInclude Include="Containment\WmlContEllipsoid3.h" />
+    <ClInclude Include="Containment\WmlContLozenge3.h" />
+    <ClInclude Include="Containment\WmlContMinBox2.h" />
+    <ClInclude Include="Containment\WmlContMinBox3.h" />
+    <ClInclude Include="Containment\WmlContMinCircle2.h" />
+    <ClInclude Include="Containment\WmlContMinEllipseCR2.h" />
+    <ClInclude Include="Containment\WmlContMinEllipsoidCR3.h" />
+    <ClInclude Include="Containment\WmlContMinSphere3.h" />
+    <ClInclude Include="Containment\WmlContPointInPolygon2.h" />
+    <ClInclude Include="Containment\WmlContScribeCir2.h" />
+    <ClInclude Include="Containment\WmlContScribeCir3Sph3.h" />
+    <ClInclude Include="Containment\WmlContSeparatePoints2.h" />
+    <ClInclude Include="Containment\WmlContSeparatePoints3.h" />
+    <ClInclude Include="Containment\WmlContSphere3.h" />
+    <ClInclude Include="Containment\WmlConvexHull2.h" />
+    <ClInclude Include="Containment\WmlConvexHull3.h" />
+    <ClInclude Include="Curves\WmlBezierCurve2.h" />
+    <ClInclude Include="Curves\WmlBezierCurve3.h" />
+    <ClInclude Include="Curves\WmlBSplineBasis.h" />
+    <ClInclude Include="Curves\WmlBSplineCurve2.h" />
+    <ClInclude Include="Curves\WmlBSplineCurve3.h" />
+    <ClInclude Include="Curves\WmlBSplineReduction.h" />
+    <ClInclude Include="Curves\WmlCubicPolynomialCurve2.h" />
+    <ClInclude Include="Curves\WmlCubicPolynomialCurve3.h" />
+    <ClInclude Include="Curves\WmlCurve2.h" />
+    <ClInclude Include="Curves\WmlCurve3.h" />
+    <ClInclude Include="Curves\WmlMultipleCurve2.h" />
+    <ClInclude Include="Curves\WmlMultipleCurve3.h" />
+    <ClInclude Include="Curves\WmlNaturalSpline2.h" />
+    <ClInclude Include="Curves\WmlNaturalSpline3.h" />
+    <ClInclude Include="Curves\WmlNURBSCurve2.h" />
+    <ClInclude Include="Curves\WmlNURBSCurve3.h" />
+    <ClInclude Include="Curves\WmlPolynomialCurve2.h" />
+    <ClInclude Include="Curves\WmlPolynomialCurve3.h" />
+    <ClInclude Include="Curves\WmlSingleCurve2.h" />
+    <ClInclude Include="Curves\WmlSingleCurve3.h" />
+    <ClInclude Include="Curves\WmlTCBSpline2.h" />
+    <ClInclude Include="Curves\WmlTCBSpline3.h" />
+    <ClInclude Include="Distance\WmlDistCir3Cir3.h" />
+    <ClInclude Include="Distance\WmlDistEllipsoidGeodesic.h" />
+    <ClInclude Include="Distance\WmlDistLin3Box3.h" />
+    <ClInclude Include="Distance\WmlDistLin3Cir3.h" />
+    <ClInclude Include="Distance\WmlDistLin3Lin3.h" />
+    <ClInclude Include="Distance\WmlDistLin3Rct3.h" />
+    <ClInclude Include="Distance\WmlDistLin3Tri3.h" />
+    <ClInclude Include="Distance\WmlDistRct3Rct3.h" />
+    <ClInclude Include="Distance\WmlDistTri3Rct3.h" />
+    <ClInclude Include="Distance\WmlDistTri3Tri3.h" />
+    <ClInclude Include="Distance\WmlDistVec2Elp2.h" />
+    <ClInclude Include="Distance\WmlDistVec2Lin2.h" />
+    <ClInclude Include="Distance\WmlDistVec2Qdr2.h" />
+    <ClInclude Include="Distance\WmlDistVec3Box3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Cir3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Eld3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Fru3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Lin3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Pln3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Qdr3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Rct3.h" />
+    <ClInclude Include="Distance\WmlDistVec3Tri3.h" />
+    <ClInclude Include="Geometry\WmlArc2.h" />
+    <ClInclude Include="Geometry\WmlAxisAlignedBox2.h" />
+    <ClInclude Include="Geometry\WmlAxisAlignedBox3.h" />
+    <ClInclude Include="Geometry\WmlBox2.h" />
+    <ClInclude Include="Geometry\WmlBox3.h" />
+    <ClInclude Include="Geometry\WmlCapsule3.h" />
+    <ClInclude Include="Geometry\WmlCircle2.h" />
+    <ClInclude Include="Geometry\WmlCircle3.h" />
+    <ClInclude Include="Geometry\WmlCone3.h" />
+    <ClInclude Include="Geometry\WmlConvexClipper.h" />
+    <ClInclude Include="Geometry\WmlConvexPolygon2.h" />
+    <ClInclude Include="Geometry\WmlConvexPolyhedron3.h" />
+    <ClInclude Include="Geometry\WmlCylinder3.h" />
+    <ClInclude Include="Geometry\WmlDisk2.h" />
+    <ClInclude Include="Geometry\WmlDisk3.h" />
+    <ClInclude Include="Geometry\WmlEllipse2.h" />
+    <ClInclude Include="Geometry\WmlEllipsoid3.h" />
+    <ClInclude Include="Geometry\WmlFrustum3.h" />
+    <ClInclude Include="Geometry\WmlHalfSpace3.h" />
+    <ClInclude Include="Geometry\WmlLine2.h" />
+    <ClInclude Include="Geometry\WmlLine3.h" />
+    <ClInclude Include="Geometry\WmlLozenge3.h" />
+    <ClInclude Include="Geometry\WmlPlane3.h" />
+    <ClInclude Include="Geometry\WmlRay2.h" />
+    <ClInclude Include="Geometry\WmlRay3.h" />
+    <ClInclude Include="Geometry\WmlRectangle3.h" />
+    <ClInclude Include="Geometry\WmlSegment2.h" />
+    <ClInclude Include="Geometry\WmlSegment3.h" />
+    <ClInclude Include="Geometry\WmlSphere3.h" />
+    <ClInclude Include="Geometry\WmlTetrahedron3.h" />
+    <ClInclude Include="Geometry\WmlTorus3.h" />
+    <ClInclude Include="Geometry\WmlTriangle2.h" />
+    <ClInclude Include="Geometry\WmlTriangle3.h" />
+    <ClInclude Include="ImageAnalysis\WmlBinary2D.h" />
+    <ClInclude Include="ImageAnalysis\WmlBinary3D.h" />
+    <ClInclude Include="ImageAnalysis\WmlElement.h" />
+    <ClInclude Include="ImageAnalysis\WmlExtractSurfaceCubes.h" />
+    <ClInclude Include="ImageAnalysis\WmlExtractSurfaceTetra.h" />
+    <ClInclude Include="ImageAnalysis\WmlFastBlur.h" />
+    <ClInclude Include="ImageAnalysis\WmlImageConvert.h" />
+    <ClInclude Include="ImageAnalysis\WmlImages.h" />
+    <ClInclude Include="ImageAnalysis\WmlLattice.h" />
+    <ClInclude Include="ImageAnalysis\WmlRasterDrawing.h" />
+    <ClInclude Include="ImageAnalysis\WmlTImage.h" />
+    <ClInclude Include="ImageAnalysis\WmlTImage2D.h" />
+    <ClInclude Include="ImageAnalysis\WmlTImage3D.h" />
+    <ClInclude Include="Interpolation\WmlIntpAkima1.h" />
+    <ClInclude Include="Interpolation\WmlIntpAkimaNonuniform1.h" />
+    <ClInclude Include="Interpolation\WmlIntpAkimaUniform1.h" />
+    <ClInclude Include="Interpolation\WmlIntpAkimaUniform2.h" />
+    <ClInclude Include="Interpolation\WmlIntpAkimaUniform3.h" />
+    <ClInclude Include="Interpolation\WmlIntpBicubic2.h" />
+    <ClInclude Include="Interpolation\WmlIntpBilinear2.h" />
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform.h" />
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform1.h" />
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform2.h" />
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform3.h" />
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform4.h" />
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniformN.h" />
+    <ClInclude Include="Interpolation\WmlIntpLinearNonuniform2.h" />
+    <ClInclude Include="Interpolation\WmlIntpLinearNonuniform3.h" />
+    <ClInclude Include="Interpolation\WmlIntpQdrNonuniform2.h" />
+    <ClInclude Include="Interpolation\WmlIntpSphere2.h" />
+    <ClInclude Include="Interpolation\WmlIntpThinPlateSpline2.h" />
+    <ClInclude Include="Interpolation\WmlIntpThinPlateSpline3.h" />
+    <ClInclude Include="Interpolation\WmlIntpTricubic3.h" />
+    <ClInclude Include="Interpolation\WmlIntpTrilinear3.h" />
+    <ClInclude Include="Interpolation\WmlIntpVectorField2.h" />
+    <ClInclude Include="Intersection\WmlIntrBox2Box2.h" />
+    <ClInclude Include="Intersection\WmlIntrBox3Box3.h" />
+    <ClInclude Include="Intersection\WmlIntrBox3Fru3.h" />
+    <ClInclude Include="Intersection\WmlIntrBox3Sph3.h" />
+    <ClInclude Include="Intersection\WmlIntrCap3Cap3.h" />
+    <ClInclude Include="Intersection\WmlIntrCir2Box2.h" />
+    <ClInclude Include="Intersection\WmlIntrCir2Cir2.h" />
+    <ClInclude Include="Intersection\WmlIntrElp2Elp2.h" />
+    <ClInclude Include="Intersection\WmlIntrHsp3Box3.h" />
+    <ClInclude Include="Intersection\WmlIntrHsp3Lin3.h" />
+    <ClInclude Include="Intersection\WmlIntrHsp3Sph3.h" />
+    <ClInclude Include="Intersection\WmlIntrHsp3Tri3.h" />
+    <ClInclude Include="Intersection\WmlIntrInterval.h" />
+    <ClInclude Include="Intersection\WmlIntrLin2Box2.h" />
+    <ClInclude Include="Intersection\WmlIntrLin2Cir2.h" />
+    <ClInclude Include="Intersection\WmlIntrLin2Lin2.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Box3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Cap3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Con3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Cyl3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Eld3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Loz3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Sph3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Tor3.h" />
+    <ClInclude Include="Intersection\WmlIntrLin3Tri3.h" />
+    <ClInclude Include="Intersection\WmlIntrLoz3Loz3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Box3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Cap3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Cyl3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Eld3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Loz3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Pln3.h" />
+    <ClInclude Include="Intersection\WmlIntrPln3Sph3.h" />
+    <ClInclude Include="Intersection\WmlIntrSph3Con3.h" />
+    <ClInclude Include="Intersection\WmlIntrSph3Fru3.h" />
+    <ClInclude Include="Intersection\WmlIntrSph3Sph3.h" />
+    <ClInclude Include="Intersection\WmlIntrTet3Tet3.h" />
+    <ClInclude Include="Intersection\WmlIntrTri2Tri2.h" />
+    <ClInclude Include="Intersection\WmlIntrTri3Box3.h" />
+    <ClInclude Include="Intersection\WmlIntrTri3Con3.h" />
+    <ClInclude Include="Intersection\WmlIntrTri3Sph3.h" />
+    <ClInclude Include="Intersection\WmlIntrTri3Tri3.h" />
+    <ClInclude Include="Intersection\WmlIntrUtility3.h" />
+    <ClInclude Include="Intersection\WmlIntrUtilityBox3.h" />
+    <ClInclude Include="Intersection\WmlIntrUtilityLin3.h" />
+    <ClInclude Include="Intersection\WmlIntrUtilityTri3.h" />
+    <ClInclude Include="Math\WmlBandedMatrix.h" />
+    <ClInclude Include="Math\WmlGMatrix.h" />
+    <ClInclude Include="Math\WmlGVector.h" />
+    <ClInclude Include="Math\WmlMath.h" />
+    <ClInclude Include="Math\WmlMatrix.h" />
+    <ClInclude Include="Math\WmlMatrix2.h" />
+    <ClInclude Include="Math\WmlMatrix3.h" />
+    <ClInclude Include="Math\WmlMatrix4.h" />
+    <ClInclude Include="Math\WmlPoint.h" />
+    <ClInclude Include="Math\WmlPoint2.h" />
+    <ClInclude Include="Math\WmlPoint3.h" />
+    <ClInclude Include="Math\WmlPoint4.h" />
+    <ClInclude Include="Math\WmlPolynomial1.h" />
+    <ClInclude Include="Math\WmlQuaternion.h" />
+    <ClInclude Include="Math\WmlTuple.h" />
+    <ClInclude Include="Math\WmlVector.h" />
+    <ClInclude Include="Math\WmlVector2.h" />
+    <ClInclude Include="Math\WmlVector3.h" />
+    <ClInclude Include="Math\WmlVector4.h" />
+    <ClInclude Include="Meshes\WmlBasicMesh.h" />
+    <ClInclude Include="Meshes\WmlConformalMap.h" />
+    <ClInclude Include="Meshes\WmlEdgeKey.h" />
+    <ClInclude Include="Meshes\WmlETManifoldMesh.h" />
+    <ClInclude Include="Meshes\WmlETNonmanifoldMesh.h" />
+    <ClInclude Include="Meshes\WmlMeshCurvature.h" />
+    <ClInclude Include="Meshes\WmlMeshSmoother.h" />
+    <ClInclude Include="Meshes\WmlMTEdge.h" />
+    <ClInclude Include="Meshes\WmlMTIEdge.h" />
+    <ClInclude Include="Meshes\WmlMTITriangle.h" />
+    <ClInclude Include="Meshes\WmlMTIVertex.h" />
+    <ClInclude Include="Meshes\WmlMTMesh.h" />
+    <ClInclude Include="Meshes\WmlMTTriangle.h" />
+    <ClInclude Include="Meshes\WmlMTVertex.h" />
+    <ClInclude Include="Meshes\WmlSmallSet.h" />
+    <ClInclude Include="Meshes\WmlTriangleKey.h" />
+    <ClInclude Include="Meshes\WmlUnorderedSet.h" />
+    <ClInclude Include="Meshes\WmlVEMesh.h" />
+    <ClInclude Include="Meshes\WmlVETMesh.h" />
+    <ClInclude Include="Miscellaneous\WmlNormalCompression.h" />
+    <ClInclude Include="Miscellaneous\WmlPerspProjEllipsoid.h" />
+    <ClInclude Include="Miscellaneous\WmlQuadToQuadTransforms.h" />
+    <ClInclude Include="Miscellaneous\WmlRandomHypersphere.h" />
+    <ClInclude Include="Numerics\WmlBisect1.h" />
+    <ClInclude Include="Numerics\WmlBisect2.h" />
+    <ClInclude Include="Numerics\WmlBisect3.h" />
+    <ClInclude Include="Numerics\WmlEigen.h" />
+    <ClInclude Include="Numerics\WmlIntegrate1.h" />
+    <ClInclude Include="Numerics\WmlLinearSystem.h" />
+    <ClInclude Include="Numerics\WmlMinimize1.h" />
+    <ClInclude Include="Numerics\WmlMinimizeN.h" />
+    <ClInclude Include="Numerics\WmlOdeEuler.h" />
+    <ClInclude Include="Numerics\WmlOdeMidpoint.h" />
+    <ClInclude Include="Numerics\WmlOdeRungeKutta4.h" />
+    <ClInclude Include="Numerics\WmlOdeSolver.h" />
+    <ClInclude Include="Numerics\WmlPolynomialRoots.h" />
+    <ClInclude Include="RationalArithmetic\WmlRVector2.h" />
+    <ClInclude Include="RationalArithmetic\WmlRVector3.h" />
+    <ClInclude Include="RationalArithmetic\WmlTInteger.h" />
+    <ClInclude Include="RationalArithmetic\WmlTRational.h" />
+    <ClInclude Include="RationalArithmetic\WmlTRVector.h" />
+    <ClInclude Include="Surfaces\WmlBSplineRectangle.h" />
+    <ClInclude Include="Surfaces\WmlImplicitSurface.h" />
+    <ClInclude Include="Surfaces\WmlNURBSRectangle.h" />
+    <ClInclude Include="Surfaces\WmlParametricSurface.h" />
+    <ClInclude Include="Surfaces\WmlQuadricSurface.h" />
+    <ClInclude Include="Surfaces\WmlSurface.h" />
+    <ClInclude Include="System\WmlCommand.h" />
+    <ClInclude Include="System\WmlSystem.h" />
+    <ClInclude Include="System\WmlWinSystem.h" />
+    <ClInclude Include="Tessellation\WmlDelaunay2.h" />
+    <ClInclude Include="Tessellation\WmlDelaunay2a.h" />
+    <ClInclude Include="Tessellation\WmlDelaunay3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageAnalysis\WmlElement.inl" />
+    <None Include="ImageAnalysis\WmlExtractSurfaceCubes.inl" />
+    <None Include="ImageAnalysis\WmlLattice.inl" />
+    <None Include="ImageAnalysis\WmlTImage.inl" />
+    <None Include="ImageAnalysis\WmlTImage2D.inl" />
+    <None Include="ImageAnalysis\WmlTImage3D.inl" />
+    <None Include="Math\WmlMatrix.inl" />
+    <None Include="Math\WmlPoint.inl" />
+    <None Include="Math\WmlTuple.inl" />
+    <None Include="Math\WmlVector.inl" />
+    <None Include="Meshes\WmlEdgeKey.inl" />
+    <None Include="Meshes\WmlETManifoldMesh.inl" />
+    <None Include="Meshes\WmlETNonmanifoldMesh.inl" />
+    <None Include="Meshes\WmlMTEdge.inl" />
+    <None Include="Meshes\WmlMTIEdge.inl" />
+    <None Include="Meshes\WmlMTITriangle.inl" />
+    <None Include="Meshes\WmlMTIVertex.inl" />
+    <None Include="Meshes\WmlMTMesh.inl" />
+    <None Include="Meshes\WmlMTTriangle.inl" />
+    <None Include="Meshes\WmlMTVertex.inl" />
+    <None Include="Meshes\WmlSmallSet.inl" />
+    <None Include="Meshes\WmlTriangleKey.inl" />
+    <None Include="Meshes\WmlUnorderedSet.inl" />
+    <None Include="Meshes\WmlVEMesh.inl" />
+    <None Include="Meshes\WmlVETMesh.inl" />
+    <None Include="Numerics\WmlPolynomialRootsDeg1.inl" />
+    <None Include="Numerics\WmlPolynomialRootsDeg2.inl" />
+    <None Include="Numerics\WmlPolynomialRootsDeg3.inl" />
+    <None Include="Numerics\WmlPolynomialRootsDeg4.inl" />
+    <None Include="Numerics\WmlPolynomialRootsDegN.inl" />
+    <None Include="RationalArithmetic\WmlRVector2.inl" />
+    <None Include="RationalArithmetic\WmlRVector3.inl" />
+    <None Include="RationalArithmetic\WmlTInteger.inl" />
+    <None Include="RationalArithmetic\WmlTRational.inl" />
+    <None Include="RationalArithmetic\WmlTRVector.inl" />
+    <None Include="System\WmlSystem.inl" />
+    <None Include="System\WmlSystem.mcr" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

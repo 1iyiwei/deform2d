@@ -1,0 +1,1733 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="WMLApproximation">
+      <UniqueIdentifier>{14ec3bf6-a04d-4159-8827-288e87c4c27c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLContainment">
+      <UniqueIdentifier>{3ec9a056-ed52-4150-bffc-523bfd1836b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLCurves">
+      <UniqueIdentifier>{c3e8ab2f-ccf7-4ccb-829a-9a196a482b12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLDistance">
+      <UniqueIdentifier>{a7b9c457-6821-4819-aeb1-d49b09bc2355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLGeometry">
+      <UniqueIdentifier>{eaa523d2-ed81-441b-81c9-987bc67d0c81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLImageAnalysis">
+      <UniqueIdentifier>{a4d49ed2-9c65-420c-90da-79368c121165}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLInterpolation">
+      <UniqueIdentifier>{ed735071-1a36-4b50-9d0b-f5744f9d5818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLIntersection">
+      <UniqueIdentifier>{196b30ce-b7c6-4b16-bb30-2d4fd79da6d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLMath">
+      <UniqueIdentifier>{154323e5-86d9-4a17-8b4a-b6ea5033e250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLMeshes">
+      <UniqueIdentifier>{4449869f-56f2-4bd9-99ff-684966e94683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLMiscellaneous">
+      <UniqueIdentifier>{c828bd28-3f50-4f37-a998-1fb952130b0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLNumerics">
+      <UniqueIdentifier>{5b954f74-1a23-4922-9bc4-c208f2532a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLRationalArithmetic">
+      <UniqueIdentifier>{1ba69e50-3dbc-40c4-8e17-8f25984d2435}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLSurfaces">
+      <UniqueIdentifier>{55f752b4-dcbe-4fb5-842e-0e31649a7873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLSystem">
+      <UniqueIdentifier>{54fff30a-8767-44d6-ba0a-f1cdc570e62e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WMLTessellation">
+      <UniqueIdentifier>{6adedb4b-73da-4128-a8c0-8c58a6865533}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Approximation\WmlApprCircleFit2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprCylinderFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprEllipseByArcs2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprEllipseFit2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprEllipsoidFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprGaussPointsFit2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprGaussPointsFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprLineFit2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprLineFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprParaboloidFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprPlaneFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprPolyFit1.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprPolyFit2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprPolyFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprQuadraticFit2.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprQuadraticFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Approximation\WmlApprSphereFit3.cpp">
+      <Filter>WMLApproximation</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContBox2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContBox3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContCapsule3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContCylinder3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContEllipse2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContEllipsoid3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContLozenge3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinBox2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinBox3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinCircle2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinEllipseCR2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinEllipsoidCR3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContMinSphere3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContPointInPolygon2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContScribeCir2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContScribeCir3Sph3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContSeparatePoints2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContSeparatePoints3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlContSphere3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlConvexHull2.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Containment\WmlConvexHull3.cpp">
+      <Filter>WMLContainment</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlBezierCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlBezierCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlBSplineBasis.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlBSplineCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlBSplineCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlBSplineReduction.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlCubicPolynomialCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlCubicPolynomialCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlMultipleCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlMultipleCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlNaturalSpline2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlNaturalSpline3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlNURBSCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlNURBSCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlPolynomialCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlPolynomialCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlSingleCurve2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlSingleCurve3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlTCBSpline2.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Curves\WmlTCBSpline3.cpp">
+      <Filter>WMLCurves</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistCir3Cir3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistEllipsoidGeodesic.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistLin3Box3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistLin3Cir3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistLin3Lin3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistLin3Rct3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistLin3Tri3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistRct3Rct3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistTri3Rct3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistTri3Tri3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec2Elp2.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec2Lin2.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec2Qdr2.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Box3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Cir3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Eld3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Fru3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Lin3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Pln3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Qdr3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Rct3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance\WmlDistVec3Tri3.cpp">
+      <Filter>WMLDistance</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlArc2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlAxisAlignedBox2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlAxisAlignedBox3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlBox2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlBox3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlCapsule3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlCircle2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlCircle3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlCone3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlConvexClipper.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlConvexPolygon2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlConvexPolyhedron3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlCylinder3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlDisk2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlDisk3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlEllipse2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlEllipsoid3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlFrustum3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlHalfSpace3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlLine2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlLine3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlLozenge3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlPlane3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlRay2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlRay3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlRectangle3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlSegment2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlSegment3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlSphere3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlTetrahedron3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlTorus3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlTriangle2.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry\WmlTriangle3.cpp">
+      <Filter>WMLGeometry</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlBinary2D.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlBinary3D.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlElement.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlExtractSurfaceCubes.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlExtractSurfaceTetra.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlFastBlur.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlImageConvert.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlImages.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlLattice.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageAnalysis\WmlRasterDrawing.cpp">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpAkima1.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpAkimaNonuniform1.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpAkimaUniform1.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpAkimaUniform2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpAkimaUniform3.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBicubic2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBilinear2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform1.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform3.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniform4.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpBSplineUniformN.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpLinearNonuniform2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpLinearNonuniform3.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpQdrNonuniform2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpSphere2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpThinPlateSpline2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpThinPlateSpline3.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpTricubic3.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpTrilinear3.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Interpolation\WmlIntpVectorField2.cpp">
+      <Filter>WMLInterpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrBox2Box2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrBox3Box3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrBox3Fru3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrBox3Sph3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrCap3Cap3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrCir2Box2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrCir2Cir2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrElp2Elp2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrHsp3Box3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrHsp3Lin3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrHsp3Sph3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrHsp3Tri3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrInterval.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin2Box2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin2Cir2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin2Lin2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Box3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Cap3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Con3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Cyl3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Eld3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Loz3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Sph3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Tor3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLin3Tri3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrLoz3Loz3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Box3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Cap3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Cyl3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Eld3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Loz3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Pln3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrPln3Sph3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrSph3Con3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrSph3Fru3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrSph3Sph3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrTet3Tet3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrTri2Tri2.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrTri3Box3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrTri3Con3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrTri3Sph3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrTri3Tri3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrUtility3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrUtilityBox3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrUtilityLin3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Intersection\WmlIntrUtilityTri3.cpp">
+      <Filter>WMLIntersection</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlBandedMatrix.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlGMatrix.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlGVector.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlMath.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlMatrix2.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlMatrix3.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlMatrix4.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlPoint2.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlPoint3.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlPoint4.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlPolynomial1.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlQuaternion.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlVector2.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlVector3.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Math\WmlVector4.cpp">
+      <Filter>WMLMath</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlBasicMesh.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlConformalMap.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlETManifoldMesh.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlETNonmanifoldMesh.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlMeshCurvature.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlMeshSmoother.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlMTEdge.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlMTMesh.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlMTTriangle.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlMTVertex.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlVEMesh.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Meshes\WmlVETMesh.cpp">
+      <Filter>WMLMeshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\WmlNormalCompression.cpp">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\WmlPerspProjEllipsoid.cpp">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\WmlQuadToQuadTransforms.cpp">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="Miscellaneous\WmlRandomHypersphere.cpp">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlBisect1.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlBisect2.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlBisect3.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlEigen.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlIntegrate1.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlLinearSystem.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlMinimize1.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlMinimizeN.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlOdeEuler.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlOdeMidpoint.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlOdeRungeKutta4.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlOdeSolver.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="Numerics\WmlPolynomialRoots.cpp">
+      <Filter>WMLNumerics</Filter>
+    </ClCompile>
+    <ClCompile Include="RationalArithmetic\WmlRVector2.cpp">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="RationalArithmetic\WmlRVector3.cpp">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="RationalArithmetic\WmlTInteger.cpp">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="RationalArithmetic\WmlTRational.cpp">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces\WmlBSplineRectangle.cpp">
+      <Filter>WMLSurfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces\WmlImplicitSurface.cpp">
+      <Filter>WMLSurfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces\WmlNURBSRectangle.cpp">
+      <Filter>WMLSurfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces\WmlParametricSurface.cpp">
+      <Filter>WMLSurfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces\WmlQuadricSurface.cpp">
+      <Filter>WMLSurfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="Surfaces\WmlSurface.cpp">
+      <Filter>WMLSurfaces</Filter>
+    </ClCompile>
+    <ClCompile Include="System\WmlCommand.cpp">
+      <Filter>WMLSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="System\WmlSystem.cpp">
+      <Filter>WMLSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="System\WmlWinSystem.cpp">
+      <Filter>WMLSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="Tessellation\WmlDelaunay2.cpp">
+      <Filter>WMLTessellation</Filter>
+    </ClCompile>
+    <ClCompile Include="Tessellation\WmlDelaunay2a.cpp">
+      <Filter>WMLTessellation</Filter>
+    </ClCompile>
+    <ClCompile Include="Tessellation\WmlDelaunay3.cpp">
+      <Filter>WMLTessellation</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Approximation\WmlApprCircleFit2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprCylinderFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprEllipseByArcs2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprEllipseFit2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprEllipsoidFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprGaussPointsFit2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprGaussPointsFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprLineFit2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprLineFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprParaboloidFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprPlaneFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprPolyFit1.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprPolyFit2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprPolyFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprQuadraticFit2.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprQuadraticFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Approximation\WmlApprSphereFit3.h">
+      <Filter>WMLApproximation</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContBox2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContBox3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContCapsule3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContCylinder3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContEllipse2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContEllipsoid3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContLozenge3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContMinBox2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContMinBox3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContMinCircle2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContMinEllipseCR2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContMinEllipsoidCR3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContMinSphere3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContPointInPolygon2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContScribeCir2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContScribeCir3Sph3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContSeparatePoints2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContSeparatePoints3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlContSphere3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlConvexHull2.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Containment\WmlConvexHull3.h">
+      <Filter>WMLContainment</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlBezierCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlBezierCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlBSplineBasis.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlBSplineCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlBSplineCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlBSplineReduction.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlCubicPolynomialCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlCubicPolynomialCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlMultipleCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlMultipleCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlNaturalSpline2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlNaturalSpline3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlNURBSCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlNURBSCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlPolynomialCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlPolynomialCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlSingleCurve2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlSingleCurve3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlTCBSpline2.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Curves\WmlTCBSpline3.h">
+      <Filter>WMLCurves</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistCir3Cir3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistEllipsoidGeodesic.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistLin3Box3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistLin3Cir3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistLin3Lin3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistLin3Rct3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistLin3Tri3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistRct3Rct3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistTri3Rct3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistTri3Tri3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec2Elp2.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec2Lin2.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec2Qdr2.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Box3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Cir3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Eld3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Fru3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Lin3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Pln3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Qdr3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Rct3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Distance\WmlDistVec3Tri3.h">
+      <Filter>WMLDistance</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlArc2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlAxisAlignedBox2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlAxisAlignedBox3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlBox2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlBox3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlCapsule3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlCircle2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlCircle3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlCone3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlConvexClipper.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlConvexPolygon2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlConvexPolyhedron3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlCylinder3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlDisk2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlDisk3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlEllipse2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlEllipsoid3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlFrustum3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlHalfSpace3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlLine2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlLine3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlLozenge3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlPlane3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlRay2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlRay3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlRectangle3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlSegment2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlSegment3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlSphere3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlTetrahedron3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlTorus3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlTriangle2.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry\WmlTriangle3.h">
+      <Filter>WMLGeometry</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlBinary2D.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlBinary3D.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlElement.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlExtractSurfaceCubes.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlExtractSurfaceTetra.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlFastBlur.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlImageConvert.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlImages.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlLattice.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlRasterDrawing.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlTImage.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlTImage2D.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageAnalysis\WmlTImage3D.h">
+      <Filter>WMLImageAnalysis</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpAkima1.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpAkimaNonuniform1.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpAkimaUniform1.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpAkimaUniform2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpAkimaUniform3.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBicubic2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBilinear2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform1.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform3.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniform4.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpBSplineUniformN.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpLinearNonuniform2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpLinearNonuniform3.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpQdrNonuniform2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpSphere2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpThinPlateSpline2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpThinPlateSpline3.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpTricubic3.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpTrilinear3.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpolation\WmlIntpVectorField2.h">
+      <Filter>WMLInterpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrBox2Box2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrBox3Box3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrBox3Fru3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrBox3Sph3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrCap3Cap3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrCir2Box2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrCir2Cir2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrElp2Elp2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrHsp3Box3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrHsp3Lin3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrHsp3Sph3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrHsp3Tri3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrInterval.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin2Box2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin2Cir2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin2Lin2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Box3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Cap3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Con3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Cyl3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Eld3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Loz3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Sph3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Tor3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLin3Tri3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrLoz3Loz3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Box3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Cap3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Cyl3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Eld3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Loz3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Pln3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrPln3Sph3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrSph3Con3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrSph3Fru3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrSph3Sph3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrTet3Tet3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrTri2Tri2.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrTri3Box3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrTri3Con3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrTri3Sph3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrTri3Tri3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrUtility3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrUtilityBox3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrUtilityLin3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Intersection\WmlIntrUtilityTri3.h">
+      <Filter>WMLIntersection</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlBandedMatrix.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlGMatrix.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlGVector.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlMath.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlMatrix.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlMatrix2.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlMatrix3.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlMatrix4.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlPoint.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlPoint2.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlPoint3.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlPoint4.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlPolynomial1.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlQuaternion.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlTuple.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlVector.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlVector2.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlVector3.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\WmlVector4.h">
+      <Filter>WMLMath</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlBasicMesh.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlConformalMap.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlEdgeKey.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlETManifoldMesh.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlETNonmanifoldMesh.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMeshCurvature.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMeshSmoother.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTEdge.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTIEdge.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTITriangle.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTIVertex.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTMesh.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTTriangle.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlMTVertex.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlSmallSet.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlTriangleKey.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlUnorderedSet.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlVEMesh.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Meshes\WmlVETMesh.h">
+      <Filter>WMLMeshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\WmlNormalCompression.h">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\WmlPerspProjEllipsoid.h">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\WmlQuadToQuadTransforms.h">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="Miscellaneous\WmlRandomHypersphere.h">
+      <Filter>WMLMiscellaneous</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlBisect1.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlBisect2.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlBisect3.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlEigen.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlIntegrate1.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlLinearSystem.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlMinimize1.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlMinimizeN.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlOdeEuler.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlOdeMidpoint.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlOdeRungeKutta4.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlOdeSolver.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="Numerics\WmlPolynomialRoots.h">
+      <Filter>WMLNumerics</Filter>
+    </ClInclude>
+    <ClInclude Include="RationalArithmetic\WmlRVector2.h">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="RationalArithmetic\WmlRVector3.h">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="RationalArithmetic\WmlTInteger.h">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="RationalArithmetic\WmlTRational.h">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="RationalArithmetic\WmlTRVector.h">
+      <Filter>WMLRationalArithmetic</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces\WmlBSplineRectangle.h">
+      <Filter>WMLSurfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces\WmlImplicitSurface.h">
+      <Filter>WMLSurfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces\WmlNURBSRectangle.h">
+      <Filter>WMLSurfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces\WmlParametricSurface.h">
+      <Filter>WMLSurfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces\WmlQuadricSurface.h">
+      <Filter>WMLSurfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Surfaces\WmlSurface.h">
+      <Filter>WMLSurfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="System\WmlCommand.h">
+      <Filter>WMLSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="System\WmlSystem.h">
+      <Filter>WMLSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="System\WmlWinSystem.h">
+      <Filter>WMLSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="Tessellation\WmlDelaunay2.h">
+      <Filter>WMLTessellation</Filter>
+    </ClInclude>
+    <ClInclude Include="Tessellation\WmlDelaunay2a.h">
+      <Filter>WMLTessellation</Filter>
+    </ClInclude>
+    <ClInclude Include="Tessellation\WmlDelaunay3.h">
+      <Filter>WMLTessellation</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageAnalysis\WmlElement.inl">
+      <Filter>WMLImageAnalysis</Filter>
+    </None>
+    <None Include="ImageAnalysis\WmlExtractSurfaceCubes.inl">
+      <Filter>WMLImageAnalysis</Filter>
+    </None>
+    <None Include="ImageAnalysis\WmlLattice.inl">
+      <Filter>WMLImageAnalysis</Filter>
+    </None>
+    <None Include="ImageAnalysis\WmlTImage.inl">
+      <Filter>WMLImageAnalysis</Filter>
+    </None>
+    <None Include="ImageAnalysis\WmlTImage2D.inl">
+      <Filter>WMLImageAnalysis</Filter>
+    </None>
+    <None Include="ImageAnalysis\WmlTImage3D.inl">
+      <Filter>WMLImageAnalysis</Filter>
+    </None>
+    <None Include="Math\WmlMatrix.inl">
+      <Filter>WMLMath</Filter>
+    </None>
+    <None Include="Math\WmlPoint.inl">
+      <Filter>WMLMath</Filter>
+    </None>
+    <None Include="Math\WmlTuple.inl">
+      <Filter>WMLMath</Filter>
+    </None>
+    <None Include="Math\WmlVector.inl">
+      <Filter>WMLMath</Filter>
+    </None>
+    <None Include="Meshes\WmlEdgeKey.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlETManifoldMesh.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlETNonmanifoldMesh.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTEdge.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTIEdge.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTITriangle.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTIVertex.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTMesh.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTTriangle.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlMTVertex.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlSmallSet.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlTriangleKey.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlUnorderedSet.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlVEMesh.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Meshes\WmlVETMesh.inl">
+      <Filter>WMLMeshes</Filter>
+    </None>
+    <None Include="Numerics\WmlPolynomialRootsDeg1.inl">
+      <Filter>WMLNumerics</Filter>
+    </None>
+    <None Include="Numerics\WmlPolynomialRootsDeg2.inl">
+      <Filter>WMLNumerics</Filter>
+    </None>
+    <None Include="Numerics\WmlPolynomialRootsDeg3.inl">
+      <Filter>WMLNumerics</Filter>
+    </None>
+    <None Include="Numerics\WmlPolynomialRootsDeg4.inl">
+      <Filter>WMLNumerics</Filter>
+    </None>
+    <None Include="Numerics\WmlPolynomialRootsDegN.inl">
+      <Filter>WMLNumerics</Filter>
+    </None>
+    <None Include="RationalArithmetic\WmlRVector2.inl">
+      <Filter>WMLRationalArithmetic</Filter>
+    </None>
+    <None Include="RationalArithmetic\WmlRVector3.inl">
+      <Filter>WMLRationalArithmetic</Filter>
+    </None>
+    <None Include="RationalArithmetic\WmlTInteger.inl">
+      <Filter>WMLRationalArithmetic</Filter>
+    </None>
+    <None Include="RationalArithmetic\WmlTRational.inl">
+      <Filter>WMLRationalArithmetic</Filter>
+    </None>
+    <None Include="RationalArithmetic\WmlTRVector.inl">
+      <Filter>WMLRationalArithmetic</Filter>
+    </None>
+    <None Include="System\WmlSystem.inl">
+      <Filter>WMLSystem</Filter>
+    </None>
+    <None Include="System\WmlSystem.mcr">
+      <Filter>WMLSystem</Filter>
+    </None>
+  </ItemGroup>
+</Project>

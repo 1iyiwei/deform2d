@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deform2D", "Deform2D.vcproj", "{9CE66209-C7AF-443F-BD51-574E27D8819C}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Deform2D", "Deform2D.vcxproj", "{9CE66209-C7AF-443F-BD51-574E27D8819C}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WildMagic2", "Wml\Source\WildMagic2.vcproj", "{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WildMagic2", "Wml\Source\WildMagic2.vcxproj", "{014EB7A4-B72D-4FF8-89F7-7ECC07FDD076}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,5 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF4220AA-E0B7-4E9E-866E-0A4DC404E332}
 	EndGlobalSection
 EndGlobal
