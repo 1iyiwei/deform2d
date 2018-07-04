@@ -1,0 +1,603 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[     23630,        515]*)
+(*NotebookOutlinePosition[     24298,        538]*)
+(*  CellTagsIndexPosition[     24254,        534]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(\(\( (*\ 
+      Expand\ for\ functions\ for\ dealing\ with\ x/
+          y\ coeffs\ for\ triangles\ \((Eqn1\ in\ Igarashi05)\)\ *) \)\(\
+\[IndentingNewLine]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\(Rot90 = {{0, 1}, {\(-1\), 
+            0}};\)\[IndentingNewLine]
+    \(FindXY[v0_, \ v1_, \ v2_]\  := \ 
+        Module[\[IndentingNewLine]{v01, \ v01N, \ vLocal, x, 
+            y}, \[IndentingNewLine]v01\  = \ 
+            v1 - v0; \[IndentingNewLine]v01N\  = \ {{0, 1}, {\(-1\), 0}} . 
+              v01; \[IndentingNewLine]vLocal\  = \ 
+            v2\  - \ v0; \[IndentingNewLine] (*\ \(Print["\<v01: \>", \ 
+                v01, \ "\< Local:\>", \ vLocal, \ "\< LdotV:\>", \ 
+                vLocal . v01, \ "\< LdotVPerp:\>", \ 
+                vLocal . v01N];\)\ *) \[IndentingNewLine]x\  = \ \((vLocal . 
+                  v01)\)\ /\ \((v01 . 
+                  v01)\); \[IndentingNewLine]y\  = \ \((vLocal . 
+                  v01N)\)/\((v01N . v01N)\); \[IndentingNewLine]{x, 
+            y}\[IndentingNewLine]];\)\[IndentingNewLine]
+    \(ExpandXY[v0_, v1_, v2_, xy_] := \ 
+        Module\ [\[IndentingNewLine]{}, \ 
+          v0\  + \ xy[\([1]\)]*\((v1 - v0)\)\  + \ 
+            xy[\([2]\)]*
+              Rot90 . \((v1 - v0)\)\[IndentingNewLine]];\)\[IndentingNewLine]
+    \(CheckXY[v0_, v1_, v2_, xy_] := \ 
+        Module\ [\[IndentingNewLine]{}, \ 
+          v2\  \[Equal] \ 
+            v0\  + \ xy[\([1]\)]*\((v1 - v0)\)\  + \ 
+              xy[\([2]\)]*
+                Rot90 . \((v1 - v0)\)\[IndentingNewLine]];\)\)\)\)], "Input"]
+}, Closed]],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      declare\ relevant\ variables . \ 
+          here\ v\_i\ is\ what\ we\ are\ solving\ for\ *) \)\(\
+\[IndentingNewLine]\)\(\(v\_0 = {v\_\(0, x\), 
+          v\_\(0, y\)};\)\[IndentingNewLine]
+    \(v\_1 = {v\_\(1, x\), v\_\(1, y\)};\)\[IndentingNewLine]
+    \(v\_2 = {v\_\(2, x\), v\_\(2, y\)};\)\[IndentingNewLine]
+    \(\(v\^d\)\_0 = {\(v\^d\)\_\(0, x\), \(v\^d\)\_\(0, y\)};\)\
+\[IndentingNewLine]
+    \(\(v\^d\)\_1 = {\(v\^d\)\_\(1, x\), \(v\^d\)\_\(1, y\)};\)\
+\[IndentingNewLine]
+    \(\(v\^d\)\_2 = {\(v\^d\)\_\(2, x\), \(v\^d\)\_\(2, y\)};\)\
+\[IndentingNewLine]
+    \(v\&^\)\_0\  = \ {\(v\&^\)\_\(0, x\), \(v\&^\)\_\(0, y\)}; \ \ \ \ \ \ \ \
+\ \  (*\ these\ are\ the\ points\ from\ step\ 1\ of\ deformation, \ 
+      which\ we\ know\ *) \[IndentingNewLine]\(v\&^\)\_1\  = \ \
+{\(v\&^\)\_\(1, x\), \(v\&^\)\_\(1, y\)};\[IndentingNewLine]
+    \(\(v\&^\)\_2\  = \ {\(v\&^\)\_\(2, x\), \(v\&^\)\_\(2, y\)};\)\
+\[IndentingNewLine]\[IndentingNewLine] (*\ 
+      Equations\ for\ the\ 3\ vertices\ of\ the\ triangle\ \
+*) \[IndentingNewLine]
+    \(\(v\^d\)\_2\  = \ 
+        v\_0\  + \ \(x\_\(0, 1\)\) \((v\_1 - v\_0)\) + \(y\_\(0, 1\)\) \((\ 
+              Rot90\  . \ \((v\_1 - v\_0)\))\);\)\[IndentingNewLine]
+    \(\(v\^d\)\_1\  = \ 
+        v\_2\  + \ \(x\_\(2, 0\)\) \((v\_0 - v\_2)\) + \(y\_\(2, 0\)\) \((\ 
+              Rot90\  . \ \((v\_0 - v\_2)\))\);\)\[IndentingNewLine]
+    \(\(v\^d\)\_0\  = \ 
+        v\_1\  + \ \(x\_\(1, 2\)\) \((v\_2 - v\_1)\) + \(y\_\(1, 2\)\) \((\ 
+              Rot90\  . \ \((v\_2 - 
+                    v\_1)\))\);\)\[IndentingNewLine]\[IndentingNewLine] (*\ 
+      error\ equations\ for\ each\ point\ in\ triangle . \ 
+          rewrite\ v2\ in\ terms\ of\ v0\ and\ v1\ \ *) \[IndentingNewLine]
+    \(v2Rules\  = \ {\ 
+          v\_\(2, x\) \[Rule] \ 
+            v\_\(0, x\) + \((\(-v\_\(0, x\)\) + 
+                    v\_\(1, x\))\)\ x\_\(0, 1\) + \((\(-v\_\(0, y\)\) + 
+                    v\_\(1, y\))\)\ y\_\(0, 1\), \ \ v\_\(2, y\) \[Rule] \ 
+            v\_\(0, y\) + \((\(-v\_\(0, y\)\) + 
+                    v\_\(1, y\))\)\ x\_\(0, 1\) + \((v\_\(0, x\) - 
+                    v\_\(1, x\))\)\ y\_\(0, 1\)};\)\[IndentingNewLine]
+    \(Ev2\  = \ \((\(v\^d\)\_2 - \(v\&^\)\_2)\) . \((\(v\^d\)\_2 - \
+\(v\&^\)\_2)\);\)\[IndentingNewLine]
+    \(Ev1\  = \ \((\(v\^d\)\_1 - \(v\&^\)\_1)\) . \((\(v\^d\)\_1 - \
+\(v\&^\)\_1)\)\  /. \ v2Rules;\)\[IndentingNewLine]
+    \(Ev0\  = \ \((\(v\^d\)\_0 - \(v\&^\)\_0)\) . \((\(v\^d\)\_0 - \
+\(v\&^\)\_0)\)\  /. \ v2Rules;\)\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\( (*\ 
+      Now\ set\ up\ a\ test\ case\ *) \)\(\[IndentingNewLine]\)\(\
+\[IndentingNewLine]\)\(P0 = {\(-1\), \(-1\)}; \ \ P1\  = \ {0, 
+        0}; \ \ P2\  = \ {0, \(-1\)};\[IndentingNewLine]
+    \(XY\_\(0, 1\) = \ FindXY[P0, P1, P2];\)\[IndentingNewLine]
+    \(XY\_\(2, 0\) = \ FindXY[P2, P0, \ P1];\)\[IndentingNewLine]
+    \(XY\_\(1, 2\) = \ 
+        FindXY[P1, P2, P0];\)\[IndentingNewLine] (*Print["\<XYChecks: \>", 
+        CheckXY[\ P0, \ P1, \ P2, \ XY\_\(0, 1\)], 
+        CheckXY[\ P2, \ P0, \ P1, \ XY\_\(2, 0\)], \ \ \ CheckXY[P1, \ P2, \ 
+          P0, \ XY\_\(1, 2\)]]*) \[IndentingNewLine]\[IndentingNewLine]
+    \(FullRules\  = \ {v\_\(0, x\) \[Rule] \ P0[\([1]\)], \ 
+          v\_\(0, y\) \[Rule] \ P0[\([2]\)], \ 
+          v\_\(1, x\) \[Rule] \ P1[\([1]\)], 
+          v\_\(1, y\) \[Rule] \ P1[\([2]\)], \ 
+          v\_\(2, x\) \[Rule] \ P2[\([1]\)], 
+          v\_\(2, y\) \[Rule] \ 
+            P2[\([2]\)], \[IndentingNewLine]x\_\(0, 1\) \[Rule] \ 
+            XY\_\(0, 1\)[\([1]\)], \ 
+          y\_\(0, 1\) \[Rule] XY\_\(0, 1\)[\([2]\)], \ 
+          x\_\(2, 0\) \[Rule] XY\_\(2, 0\)[\([1]\)], \ 
+          y\_\(2, 0\) \[Rule] \ XY\_\(2, 0\)[\([2]\)], \ 
+          x\_\(1, 2\) \[Rule] \ XY\_\(1, 2\)[\([1]\)], \ 
+          y\_\(1, 2\) \[Rule] \ XY\_\(1, 2\)[\([2]\)]};\)\[IndentingNewLine]
+    \(XYRules\  = \ {x\_\(0, 1\) \[Rule] \ XY\_\(0, 1\)[\([1]\)], \ 
+          y\_\(0, 1\) \[Rule] XY\_\(0, 1\)[\([2]\)], \ 
+          x\_\(2, 0\) \[Rule] XY\_\(2, 0\)[\([1]\)], \ 
+          y\_\(2, 0\) \[Rule] \ XY\_\(2, 0\)[\([2]\)], \ 
+          x\_\(1, 2\) \[Rule] \ XY\_\(1, 2\)[\([1]\)], \ 
+          y\_\(1, 2\) \[Rule] \ XY\_\(1, 2\)[\([2]\)]};\)\[IndentingNewLine]
+    \(HatRules\  = \ {\(v\&^\)\_\(0, x\) \[Rule] \ 
+            P0[\([1]\)], \(v\&^\)\_\(0, y\) \[Rule] \ 
+            P0[\([2]\)], \ \(v\&^\)\_\(1, x\) \[Rule] \ 
+            P1[\([1]\)], \(v\&^\)\_\(1, y\) \[Rule] \ 
+            P1[\([2]\)], \ \(v\&^\)\_\(2, x\) \[Rule] \ 
+            P2[\([1]\)], \(v\&^\)\_\(2, y\) \[Rule] \ 
+            P2[\([2]\)]};\)\[IndentingNewLine]
+    Print["\<EVChecks ShouldBeZero: \>", \ \[IndentingNewLine]\(Ev2 /. 
+          FullRules\) /. HatRules, "\< \>", \ \(Ev1 /. FullRules\) /. 
+        HatRules, "\< \>", \ \(Ev2\  /. \ FullRules\)\  /. \ 
+        HatRules]\)\)\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("EVChecks ShouldBeZero: "\[InvisibleSpace]0\
+\[InvisibleSpace]" "\[InvisibleSpace]0\[InvisibleSpace]" \
+"\[InvisibleSpace]0\),
+      SequenceForm[ "EVChecks ShouldBeZero: ", 0, " ", 0, " ", 0],
+      Editable->False]], "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ Ok, \ 
+      now\ solve\ the\ linear\ system\ of\ equations\ *) \)\(\
+\[IndentingNewLine]\)\(\[IndentingNewLine]\)\(\(EF\  = \ \ Ev0\  + \ 
+          Ev1\  + \ Ev2;\)\[IndentingNewLine]
+    Print["\<ShouldBeZeroish: \>", \(EF\  /. \ FullRules\)\  /. \ 
+        HatRules]\[IndentingNewLine]\[IndentingNewLine]
+    \(EqnSet\  = \ {\[IndentingNewLine]D[\(EF\  /. \ HatRules\)\  /. \ 
+                XYRules, \ v\_\(0, x\)]\  \[Equal] \ 
+            0, \[IndentingNewLine]D[\(EF\  /. \ HatRules\)\  /. \ XYRules, \ 
+              v\_\(0, y\)]\  \[Equal] \ 
+            0, \[IndentingNewLine]D[\(EF\  /. \ HatRules\)\  /. \ XYRules, \ 
+              v\_\(1, x\)]\  \[Equal] \ 
+            0, \[IndentingNewLine]D[\(EF\  /. \ HatRules\)\  /. \ XYRules, \ 
+              v\_\(1, y\)]\  \[Equal] \ 0\ \ };\)\[IndentingNewLine]
+    Solve[
+      EqnSet, {v\_\(0, x\), \ v\_\(0, y\), \ \ v\_\(1, x\), \ 
+        v\_\(1, y\)}]\[IndentingNewLine]
+    \)\)\)], "Input"],
+
+Cell[BoxData[
+    InterpretationBox[\("ShouldBeZeroish: "\[InvisibleSpace]0\),
+      SequenceForm[ "ShouldBeZeroish: ", 0],
+      Editable->False]], "Print"],
+
+Cell[BoxData[
+    \({{v\_\(0, x\) \[Rule] \(-1\), v\_\(0, y\) \[Rule] \(-1\), 
+        v\_\(1, x\) \[Rule] 0, v\_\(1, y\) \[Rule] 0}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\( (*\ 
+      Sanity\ check\  - \ \ should\ get\ same\ result\ when\ differentiating\ \
+component - 
+        wise\ *) \)\(\[IndentingNewLine]\)\(\(EqnSet\  = \ {\
+\[IndentingNewLine]\((\(D[Ev0, v\_\(0, x\)]\  + \ \ D[Ev1, v\_\(0, x\)]\  + \ 
+                    D[Ev2, v\_\(0, x\)] /. \ HatRules\)\  /. \ 
+                XYRules)\)\  \[Equal] \ 
+            0, \[IndentingNewLine]\((\(D[Ev0, v\_\(0, y\)]\  + \ \ D[Ev1, 
+                      v\_\(0, y\)]\  + \ D[Ev2, v\_\(0, y\)] /. \ 
+                  HatRules\)\  /. \ XYRules)\)\  \[Equal] \ 
+            0, \[IndentingNewLine]\((\(D[Ev0, v\_\(1, x\)]\  + \ \ D[Ev1, 
+                      v\_\(1, x\)]\  + \ D[Ev2, v\_\(1, x\)] /. \ 
+                  HatRules\)\  /. \ XYRules)\)\  \[Equal] \ 
+            0, \[IndentingNewLine]\((\(D[Ev0, v\_\(1, y\)]\  + \ \ D[Ev1, 
+                      v\_\(1, y\)]\  + \ D[Ev2, v\_\(1, y\)] /. \ 
+                  HatRules\)\  /. \ XYRules)\)\  \[Equal] \ 
+            0\ \ };\)\[IndentingNewLine]
+    Solve[
+      EqnSet, {v\_\(0, x\), \ v\_\(0, y\), \ \ v\_\(1, x\), \ 
+        v\_\(1, y\)}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \({{v\_\(0, x\) \[Rule] \(-1\), v\_\(0, y\) \[Rule] \(-1\), 
+        v\_\(1, x\) \[Rule] 0, v\_\(1, y\) \[Rule] 0}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\( (*\ Ok, \ 
+      here\ is\ a\ useful\ test\ for\ coding . \ 
+          This\ will\ produce\ the\ F\ and\ C\ matrices\ that\
+\[IndentingNewLine]one\ would\ use\ in\ the\ code . \ So, \ by\ setting\ P0, 
+      P1, P2\ above, \ 
+      you\ can\ check\ that\ your\ matrices\[IndentingNewLine]and\ vectors\ \
+are\ correct\ \((\ 
+          they\ \ printed\ below\ )\)\ *) \)\(\[IndentingNewLine]\)\(\
+\[IndentingNewLine]\)\(Print["\<This is the F matrix (before inverting): \>"]\
+\[IndentingNewLine]
+    FMatrix\  = \ {\[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ v\_\(0, x\)]\ , \ {v\_\(0, x\), \ 
+            v\_\(0, y\), \ \ v\_\(1, x\), \ 
+            v\_\(1, y\)}], \[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ v\_\(0, y\)]\ , \ {v\_\(0, x\), \ 
+            v\_\(0, y\), \ \ v\_\(1, x\), \ 
+            v\_\(1, y\)}], \[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ v\_\(1, x\)]\ , \ {v\_\(0, x\), \ 
+            v\_\(0, y\), \ \ v\_\(1, x\), \ 
+            v\_\(1, y\)}], \[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ v\_\(1, y\)]\ , \ {v\_\(0, x\), \ 
+            v\_\(0, y\), \ \ v\_\(1, x\), \ 
+            v\_\(1, y\)}]\ }\[IndentingNewLine]
+    Print["\<This is the C matrix: \>"]\[IndentingNewLine]
+    CVec\  = \ {\[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ 
+            v\_\(0, x\)]\ , \ {\(v\&^\)\_\(0, x\), \ \(v\&^\)\_\(0, y\), \
+\(v\&^\)\_\(1, x\), \ \(v\&^\)\_\(1, y\), \(v\&^\)\_\(2, x\), \ \
+\(v\&^\)\_\(2, y\)}], \[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ 
+            v\_\(0, y\)]\ , \ {\(v\&^\)\_\(0, x\), \ \(v\&^\)\_\(0, y\), \
+\(v\&^\)\_\(1, x\), \ \(v\&^\)\_\(1, y\), \(v\&^\)\_\(2, x\), \ \
+\(v\&^\)\_\(2, y\)}], \[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ 
+            v\_\(1, x\)]\ , \ {\(v\&^\)\_\(0, x\), \ \(v\&^\)\_\(0, y\), \
+\(v\&^\)\_\(1, x\), \ \(v\&^\)\_\(1, y\), \(v\&^\)\_\(2, x\), \ \
+\(v\&^\)\_\(2, y\)}], \[IndentingNewLine]Coefficient[\ 
+          D[EF\  /. \ XYRules, \ 
+            v\_\(1, y\)]\ , \ {\(v\&^\)\_\(0, x\), \ \(v\&^\)\_\(0, y\), \
+\(v\&^\)\_\(1, x\), \ \(v\&^\)\_\(1, y\), \(v\&^\)\_\(2, x\), \ \
+\(v\&^\)\_\(2, y\)}]\ }\[IndentingNewLine]
+    Print["\<This is C multiplied by the deformed points:\>"]\
+\[IndentingNewLine]
+    CVec2\  = \ 
+      CVec . {\(v\&^\)\_\(0, x\), \ \(v\&^\)\_\(0, y\), \(v\&^\)\_\(1, x\), \ \
+\(v\&^\)\_\(1, y\), \(v\&^\)\_\(2, x\), \ \(v\&^\)\_\(2, y\)}\  /. \ 
+        HatRules\[IndentingNewLine]
+    Print["\<And here is the solution (Should be {P0,P1}):\>"]\
+\[IndentingNewLine]
+    LinearSolve[FMatrix, \(-CVec2\)]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("This is the F matrix (before inverting): "\)], "Print"],
+
+Cell[BoxData[
+    \({{3, 0, 0, 1}, {0, 3, \(-1\), 0}, {0, \(-1\), 3, 0}, {1, 0, 0, 
+        3}}\)], "Output"],
+
+Cell[BoxData[
+    \("This is the C matrix: "\)], "Print"],
+
+Cell[BoxData[
+    \({{\(-2\), 0, 0, 0, \(-1\), \(-1\)}, {0, \(-2\), 0, 0, 1, \(-1\)}, {0, 
+        0, \(-2\), 0, \(-1\), 1}, {0, 0, 
+        0, \(-2\), \(-1\), \(-1\)}}\)], "Output"],
+
+Cell[BoxData[
+    \("This is C multiplied by the deformed points:"\)], "Print"],
+
+Cell[BoxData[
+    \({3, 3, \(-1\), 1}\)], "Output"],
+
+Cell[BoxData[
+    \("And here is the solution (Should be {P0,P1}):"\)], "Print"],
+
+Cell[BoxData[
+    \({\(-1\), \(-1\), 0, 0}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\( (*\ 
+      this\ is\ the\ nasty\ bit\ where\ I\ simplified\ the\ equations\ so\ \
+they\ are\ reasonable\ to\ type\ into\ code . \ 
+          Perhaps\ there\ is\ a\ better\ way\ to\ do\ this, \ 
+      but\ I\ don' 
+          t\ know\ what\ it\ is ... *) \)\(\[IndentingNewLine]\)\(\
+\[IndentingNewLine]\)\(\(FormulaRules\  = \ {\[IndentingNewLine]\
+\[IndentingNewLine]\((x\_\(1, 2\)\ y\_\(0, 1\) + \((\(-1\) + 
+                      x\_\(0, 1\))\)\ y\_\(1, 2\))\) \[Rule] \ 
+            k\_1, \ \ \ \  (*\ 
+            a\ *) \[IndentingNewLine]\((x\_\(1, 2\)\ y\_\(0, 1\) - 
+                y\_\(1, 2\) + x\_\(0, 1\)\ y\_\(1, 2\))\) \[Rule] \ 
+            k\_1, \[IndentingNewLine]\((\(-x\_\(1, 2\)\)\ y\_\(0, 1\) + 
+                y\_\(1, 2\) - 
+                x\_\(0, 1\)\ y\_\(1, 2\))\) \[Rule] \ \(-k\_1\), \
+\[IndentingNewLine]\((\(-x\_\(1, 2\)\)\ y\_\(0, 1\) - \((\(-1\) + 
+                      x\_\(0, 1\))\)\ y\_\(1, 2\))\) \[Rule] \ \(-k\_1\), \ \ \
+ (*\ a\ *) \[IndentingNewLine]\[IndentingNewLine]\((\(-x\_\(1, 2\)\) + 
+                x\_\(0, 1\)\ x\_\(1, 2\) - 
+                y\_\(0, 1\)\ y\_\(1, 2\))\) \[Rule] \ 
+            k\_2, \[IndentingNewLine]\((\((\(-1\) + 
+                      x\_\(0, 1\))\)\ x\_\(1, 2\) - 
+                y\_\(0, 1\)\ y\_\(1, 2\))\) \[Rule] \ 
+            k\_2, \[IndentingNewLine]\((\(-1\) - \((\(-1\) + 
+                      x\_\(0, 1\))\)\ x\_\(1, 2\) + 
+                y\_\(0, 1\)\ y\_\(1, 2\))\) \[Rule] \ \((\(-1\)\  - \ 
+                k\_2)\), \[IndentingNewLine]\[IndentingNewLine]\((\(-y\_\(0, \
+1\)\) + x\_\(2, 0\)\ y\_\(0, 1\) + x\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            k\_3, \[IndentingNewLine]\((y\_\(0, 1\) - 
+                x\_\(2, 0\)\ y\_\(0, 1\) - 
+                x\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ \(-k\_3\), \
+\[IndentingNewLine]\((\((\(-1\) + x\_\(2, 0\))\)\ y\_\(0, 1\) + 
+                x\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            k\_3, \[IndentingNewLine]\[IndentingNewLine]\((\((\(-1\) + 
+                      x\_\(0, 1\))\)\ y\_\(0, 1\) + 
+                x\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            k\_4, \[IndentingNewLine]\((\((\(-1\) + 
+                      x\_\(2, 0\))\)\ x\_\(0, 1\) - 
+                y\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            k\_5, \[IndentingNewLine]\((\(-1\) - \((\(-1\) + 
+                      x\_\(2, 0\))\)\ x\_\(0, 1\) + 
+                y\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ \(-1\) - 
+              k\_5, \[IndentingNewLine]\((\(-x\_\(0, 1\)\) + 
+                x\_\(0, 1\)\ x\_\(2, 0\) - 
+                y\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            k\_5, \[IndentingNewLine]\[IndentingNewLine]\((\(-1\) + 
+                x\_\(0, 1\))\) \[Rule] \ 
+            a, \[IndentingNewLine]\((\((\(-1\) + x\_\(0, 1\))\)\^2 + 
+                y\_\(0, 1\)\%2)\) \[Rule] \ a\_1, \ \ \  (*\ 
+            this\ is\ a\^2\  + \ 
+              y\ *) \[IndentingNewLine]\((x\_\(0, 1\)\%2 + 
+                y\_\(0, 1\)\%2)\) \[Rule] \ 
+            a\_2, \[IndentingNewLine]\((\(-x\_\(0, 1\)\%2\) - 
+                y\_\(0, 1\)\%2)\) \[Rule] \ \(-a\_2\), \[IndentingNewLine]\
+\[IndentingNewLine]\((\(-1\) + x\_\(2, 0\))\) \[Rule] \ 
+            b, \[IndentingNewLine]\((\((\(-1\) + x\_\(2, 0\))\)\^2 + 
+                y\_\(2, 0\)\%2)\) \[Rule] \ 
+            b\_1, \[IndentingNewLine]\[IndentingNewLine]\((x\_\(1, 2\)\%2 + 
+                y\_\(1, 2\)\%2)\) \[Rule] \ 
+            c\_2\[IndentingNewLine]\[IndentingNewLine]};\)\[IndentingNewLine]\
+\[IndentingNewLine]
+    \(RulesRound2\  = \ {\[IndentingNewLine]\((1 + 2\ a\ x\_\(1, 2\) + 
+                a\_1\ x\_\(1, 2\)\%2 - 2\ y\_\(0, 1\)\ y\_\(1, 2\) + 
+                a\_1\ y\_\(1, 2\)\%2)\) \[Rule] \ 
+            r\_1, \[IndentingNewLine]\((\(-b\)\ x\_\(0, 1\) - 
+                b\_1\ x\_\(0, 1\)\%2 + 
+                y\_\(0, 1\)\ \((\(-b\_1\)\ y\_\(0, 1\) + 
+                      y\_\(2, 0\))\))\) \[Rule] \ 
+            r\_2, \[IndentingNewLine]\((\(-a\)\ x\_\(1, 2\) - 
+                a\_1\ x\_\(1, 2\)\%2 + 
+                y\_\(1, 2\)\ \((y\_\(0, 1\) - 
+                      a\_1\ y\_\(1, 2\))\))\) \[Rule] \ 
+            r\_3, \[IndentingNewLine]\((a\ x\_\(0, 1\) + 
+                y\_\(0, 1\)\%2)\) \[Rule] \ 
+            r\_5, \[IndentingNewLine]\((\(-a\)\ x\_\(0, 1\) - 
+                y\_\(0, 1\)\%2)\) \[Rule] \ \(-r\_5\), \[IndentingNewLine]\((\
+\(-b\)\ y\_\(0, 1\) - x\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            r\_6, \[IndentingNewLine]\((1 + 2\ b\ x\_\(0, 1\) + 
+                b\_1\ x\_\(0, 1\)\%2 + b\_1\ y\_\(0, 1\)\%2 - 
+                2\ y\_\(0, 1\)\ y\_\(2, 0\))\) \[Rule] \ 
+            r\_7, \[IndentingNewLine]\((1 + 2\ b\ x\_\(0, 1\) + 
+                b\_1\ x\_\(0, 1\)\%2 + 
+                y\_\(0, 1\)\ \((b\_1\ y\_\(0, 1\) - 
+                      2\ y\_\(2, 0\))\))\) \[Rule] \ 
+            r\_7\[IndentingNewLine]};\)\[IndentingNewLine]
+    \(CoeffVec\  = \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), 
+          v\_\(1, y\), \(v\&^\)\_\(0, x\), \ \(v\&^\)\_\(0, y\), \
+\(v\&^\)\_\(1, x\), \ \(v\&^\)\_\(1, y\), \(v\&^\)\_\(2, x\), \ \
+\(v\&^\)\_\(2, y\)};\)\[IndentingNewLine]\[IndentingNewLine]
+    Print\ ["\<First  Row:\>"]\[IndentingNewLine]
+    Row1A\  = \ \(Coefficient[FullSimplify[D[Ev0, v\_\(0, x\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row1B\  = \ \(Coefficient[FullSimplify[D[Ev1, v\_\(0, x\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row1C\  = \ \(Coefficient[FullSimplify[D[Ev2, v\_\(0, x\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Print\ ["\<Second  Row:\>"]\[IndentingNewLine]
+    Row2A\  = \ \(Coefficient[FullSimplify[D[Ev0, v\_\(0, y\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row2B\  = \ \(Coefficient[FullSimplify[D[Ev1, v\_\(0, y\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row2C\  = \ \(Coefficient[FullSimplify[D[Ev2, v\_\(0, y\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Print\ ["\<Third  Row:\>"]\[IndentingNewLine]
+    Row3A\  = \ \(Coefficient[FullSimplify[D[Ev0, v\_\(1, x\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row3B\  = \ \(Coefficient[FullSimplify[D[Ev1, v\_\(1, x\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row3C\  = \ \(Coefficient[FullSimplify[D[Ev2, v\_\(1, x\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Print\ ["\<Fourth  Row:\>"]\[IndentingNewLine]
+    Row4A\  = \ \(Coefficient[FullSimplify[D[Ev0, v\_\(1, y\)]], 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row4B\  = \ \(Coefficient[FullSimplify[D[Ev1, v\_\(1, y\)]], \ 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\[IndentingNewLine]
+    Row4C\  = \ \(Coefficient[FullSimplify[D[Ev2, v\_\(1, y\)]], 
+            CoeffVec]\  /. \ FormulaRules\) /. RulesRound2\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("First  Row:"\)], "Print"],
+
+Cell[BoxData[
+    \({2\ a\_1\ c\_2, 0, 2\ r\_3, 2\ k\_1, 2\ k\_2, \(-2\)\ k\_1, 0, 0, 0, 
+      0}\)], "Output"],
+
+Cell[BoxData[
+    \({2\ r\_7, 0, 2\ r\_2, 2\ r\_6, 0, 0, 2\ \((\(-1\) - k\_5)\), 2\ k\_3, 
+      0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({2\ a\_1, 0, \(-2\)\ r\_5, 2\ y\_\(0, 1\), 0, 0, 0, 0, 
+      2\ a, \(-2\)\ y\_\(0, 1\)}\)], "Output"],
+
+Cell[BoxData[
+    \("Second  Row:"\)], "Print"],
+
+Cell[BoxData[
+    \({0, 2\ a\_1\ c\_2, \(-2\)\ k\_1, 2\ r\_3, 2\ k\_1, 2\ k\_2, 0, 0, 0, 
+      0}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 2\ r\_7, 2\ k\_3, 2\ r\_2, 0, 0, \(-2\)\ k\_3, 
+      2\ \((\(-1\) - k\_5)\), 0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 2\ a\_1, \(-2\)\ y\_\(0, 1\), \(-2\)\ r\_5, 0, 0, 0, 0, 
+      2\ y\_\(0, 1\), 2\ a}\)], "Output"],
+
+Cell[BoxData[
+    \("Third  Row:"\)], "Print"],
+
+Cell[BoxData[
+    \({2\ r\_3, \(-2\)\ k\_1, 2\ r\_1, 0, 2\ \((\(-1\) - k\_2)\), 2\ k\_1, 0, 
+      0, 0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({2\ r\_2, 2\ k\_3, 2\ a\_2\ b\_1, 0, 0, 0, 2\ k\_5, 2\ r\_6, 0, 
+      0}\)], "Output"],
+
+Cell[BoxData[
+    \({\(-2\)\ r\_5, \(-2\)\ y\_\(0, 1\), 2\ a\_2, 0, 0, 0, 0, 
+      0, \(-2\)\ x\_\(0, 1\), 2\ y\_\(0, 1\)}\)], "Output"],
+
+Cell[BoxData[
+    \("Fourth  Row:"\)], "Print"],
+
+Cell[BoxData[
+    \({2\ k\_1, 2\ r\_3, 0, 2\ r\_1, \(-2\)\ k\_1, 2\ \((\(-1\) - k\_2)\), 0, 
+      0, 0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({\(-2\)\ k\_3, 2\ r\_2, 0, 2\ a\_2\ b\_1, 0, 0, 2\ k\_3, 2\ k\_5, 0, 
+      0}\)], "Output"],
+
+Cell[BoxData[
+    \({2\ y\_\(0, 1\), \(-2\)\ r\_5, 0, 2\ a\_2, 0, 0, 0, 
+      0, \(-2\)\ y\_\(0, 1\), \(-2\)\ x\_\(0, 1\)}\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1454}, {0, 977}},
+CellGrouping->Manual,
+WindowSize->{1342, 835},
+WindowMargins->{{37, Automatic}, {26, Automatic}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 193, 4, 61, "Input"],
+Cell[1972, 59, 1401, 26, 477, "Input"]
+}, Closed]],
+Cell[3388, 88, 2559, 47, 552, "Input"],
+
+Cell[CellGroupData[{
+Cell[5972, 139, 2356, 41, 425, "Input"],
+Cell[8331, 182, 265, 5, 30, "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[8633, 192, 985, 18, 321, "Input"],
+Cell[9621, 212, 157, 3, 30, "Print"],
+Cell[9781, 217, 147, 2, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[9965, 224, 1154, 20, 217, "Input"],
+Cell[11122, 246, 147, 2, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11306, 253, 2721, 50, 555, "Input"],
+Cell[14030, 305, 76, 1, 30, "Print"],
+Cell[14109, 308, 109, 2, 34, "Output"],
+Cell[14221, 312, 57, 1, 30, "Print"],
+Cell[14281, 315, 182, 3, 34, "Output"],
+Cell[14466, 320, 79, 1, 30, "Print"],
+Cell[14548, 323, 51, 1, 34, "Output"],
+Cell[14602, 326, 80, 1, 30, "Print"],
+Cell[14685, 329, 56, 1, 34, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[14778, 335, 7162, 117, 1723, "Input"],
+Cell[21943, 454, 46, 1, 30, "Print"],
+Cell[21992, 457, 112, 2, 34, "Output"],
+Cell[22107, 461, 116, 2, 34, "Output"],
+Cell[22226, 465, 122, 2, 34, "Output"],
+Cell[22351, 469, 47, 1, 30, "Print"],
+Cell[22401, 472, 112, 2, 34, "Output"],
+Cell[22516, 476, 121, 2, 34, "Output"],
+Cell[22640, 480, 122, 2, 34, "Output"],
+Cell[22765, 484, 46, 1, 30, "Print"],
+Cell[22814, 487, 121, 2, 34, "Output"],
+Cell[22938, 491, 107, 2, 34, "Output"],
+Cell[23048, 495, 137, 2, 34, "Output"],
+Cell[23188, 499, 47, 1, 30, "Print"],
+Cell[23238, 502, 121, 2, 34, "Output"],
+Cell[23362, 506, 112, 2, 34, "Output"],
+Cell[23477, 510, 137, 2, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

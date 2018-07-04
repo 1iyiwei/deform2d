@@ -1,0 +1,224 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      5696,        170]*)
+(*NotebookOutlinePosition[      6342,        192]*)
+(*  CellTagsIndexPosition[      6298,        188]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    \(\(\( (*\ 
+      variables\ for\ a\ single\ edge\ error\ function\ E\_f\ *) \)\(\
+\[IndentingNewLine]\)\(\(v\_a = {v\_\(a, x\), 
+          v\_\(a, y\)};\)\[IndentingNewLine]
+    \(v\_b = {v\_\(b, x\), v\_\(b, y\)};\)\[IndentingNewLine]
+    \(v\_c = {v\_\(c, x\), v\_\(c, y\)};\)\[IndentingNewLine]
+    \(u\_a = {u\_\(a, x\), u\_\(a, y\)};\)\ \ \ \  (*\ 
+      u\_i\ are\ the\ deformed\ positions\ from\ the\ previous\ step\ \
+*) \[IndentingNewLine]
+    \(u\_b = {u\_\(b, x\), 
+          u\_\(b, y\)};\)\[IndentingNewLine]\[IndentingNewLine] (*\ 
+      This\ is\ the\ error\ function\ for\ a\ single\ edge\ E\_f\ \ \((eqn\ \
+12\ in\ Igarashi05)\)\ *) \[IndentingNewLine]\[IndentingNewLine]
+    \(EeAB\  = \ \((\ \((v\_b - v\_a)\)\  - \ \((u\_b\  - \ 
+                  u\_a)\)\ )\) . \ \((\ \((v\_b - v\_a)\)\  - \ \((u\_b\  - \ 
+                  u\_a)\)\ )\);\)\)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\(\[IndentingNewLine]\)\
+\( (*\ Coefficients\ for\ the\ terms\ of\ matrix\ H\  - \ 
+        each\ row\ is\ \(v\_\(\([abc]\)[xy]\)\) 
+          v\_\(\([abc]\)[xy]\)\ *) \)\(\[IndentingNewLine]\)\(\
+\[IndentingNewLine]\)\(Print["\<X Coeffs:\>"]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(a, x\)]], \ {v\_\(a, x\), v\_\(b, x\), 
+        v\_\(c, x\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(b, x\)]], \ {v\_\(a, x\), v\_\(b, x\), 
+        v\_\(c, x\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(c, x\)]], \ {v\_\(a, x\), v\_\(b, x\), 
+        v\_\(c, x\)}\ ]\[IndentingNewLine]
+    Print["\<Y Coeffs:\>"]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(a, y\)]], \ {v\_\(a, y\), \ v\_\(b, y\), 
+        v\_\(c, y\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(b, y\)]], \ {v\_\(a, y\), \ v\_\(b, y\), 
+        v\_\(c, y\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(c, y\)]], \ {v\_\(a, y\), \ v\_\(b, y\), 
+        v\_\(c, y\)}\ ]\[IndentingNewLine]\[IndentingNewLine] (*\ 
+      Coefficients\ for\ the\ terms\ of\ F\ \((terms\ that\ use\ previous - 
+            step\ deformed\ coords)\)\ *) \[IndentingNewLine]\
+\[IndentingNewLine]
+    Print["\<DeformedX Coeffs:\>"]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(a, x\)]], \ {u\_\(a, x\), 
+        u\_\(b, x\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(b, x\)]], \ {u\_\(a, x\), 
+        u\_\(b, x\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(c, x\)]], \ {u\_\(a, x\), 
+        u\_\(b, x\)}\ ]\[IndentingNewLine]
+    Print["\<DeformedY Coeffs:\>"]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(a, y\)]], \ {u\_\(a, y\), 
+        u\_\(b, y\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(b, y\)]], \ {u\_\(a, y\), 
+        u\_\(b, y\)}\ ]\[IndentingNewLine]
+    Coefficient[
+      FullSimplify[D[EeAB, \ v\_\(c, y\)]], \ {u\_\(a, y\), 
+        u\_\(b, y\)}\ ]\[IndentingNewLine]
+    \)\)\)], "Input"],
+
+Cell[BoxData[
+    \("X Coeffs:"\)], "Print"],
+
+Cell[BoxData[
+    \({2, \(-2\), 0}\)], "Output"],
+
+Cell[BoxData[
+    \({\(-2\), 2, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \("Y Coeffs:"\)], "Print"],
+
+Cell[BoxData[
+    \({2, \(-2\), 0}\)], "Output"],
+
+Cell[BoxData[
+    \({\(-2\), 2, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \("DeformedX Coeffs:"\)], "Print"],
+
+Cell[BoxData[
+    \({\(-2\), 2}\)], "Output"],
+
+Cell[BoxData[
+    \({2, \(-2\)}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 0}\)], "Output"],
+
+Cell[BoxData[
+    \("DeformedY Coeffs:"\)], "Print"],
+
+Cell[BoxData[
+    \({\(-2\), 2}\)], "Output"],
+
+Cell[BoxData[
+    \({2, \(-2\)}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 0}\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1454}, {0, 977}},
+WindowSize->{1319, 792},
+WindowMargins->{{58, Automatic}, {Automatic, 29}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1754, 51, 898, 16, 269, "Input"],
+
+Cell[CellGroupData[{
+Cell[2677, 71, 2225, 48, 659, "Input"],
+Cell[4905, 121, 44, 1, 30, "Print"],
+Cell[4952, 124, 48, 1, 34, "Output"],
+Cell[5003, 127, 48, 1, 34, "Output"],
+Cell[5054, 130, 43, 1, 34, "Output"],
+Cell[5100, 133, 44, 1, 30, "Print"],
+Cell[5147, 136, 48, 1, 34, "Output"],
+Cell[5198, 139, 48, 1, 34, "Output"],
+Cell[5249, 142, 43, 1, 34, "Output"],
+Cell[5295, 145, 52, 1, 30, "Print"],
+Cell[5350, 148, 45, 1, 34, "Output"],
+Cell[5398, 151, 45, 1, 34, "Output"],
+Cell[5446, 154, 40, 1, 34, "Output"],
+Cell[5489, 157, 52, 1, 30, "Print"],
+Cell[5544, 160, 45, 1, 34, "Output"],
+Cell[5592, 163, 45, 1, 34, "Output"],
+Cell[5640, 166, 40, 1, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

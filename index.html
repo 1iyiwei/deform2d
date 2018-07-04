@@ -1,0 +1,102 @@
+<html><!-- InstanceBegin template="/Templates/SoftPageTemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link rel="shortcut icon" href="../../favicon2.ico">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>As-Rigid-As-Possible 2D Shape Manipulation Demo </title>
+<!-- InstanceEndEditable -->
+<!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+<link href="../../style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width=1000 cellpadding="2" cellspacing="2">
+<tr>
+  <td class="SubHead"><!-- InstanceBeginEditable name="TitleRegion" -->As-Rigid-As-Possible 2D Shape Manipulation Demo <!-- InstanceEndEditable --></td>
+</tr>
+</table>
+
+
+<p><span class="SmallHead">Downloads:</span> <!-- InstanceBeginEditable name="Downloads" -->[<a href="http://www.dgp.toronto.edu/~rms/software/Deform2D/Deform2DBin.zip">Win32 Binaries</a>] [<a href="http://www.dgp.toronto.edu/~rms/software/Deform2D/Deform2D.zip">Source</a>]<!-- InstanceEndEditable --></p>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td class="SmallHead">&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="SmallHead">Details</td>
+  </tr>
+  <tr>
+    <td height="3"><hr align="left" width=800 noshade></td>
+  </tr>
+</table>
+
+<table width=800>
+<tr>
+  <td class="lesssmalltext">
+<!-- InstanceBeginEditable name="AbstractRegion" -->
+<p>Deform2D is an interactive demo program which implements
+  the As-Rigid-As-Possible Shape Manipulation technique described in:</p>
+<p><strong>As-rigid-as-possible shape manipulation</strong>. <a href="http://www-ui.is.s.u-tokyo.ac.jp/~takeo">Takeo Igarashi</a>, <a href="http://www.moscovich.net/tomer/">Tomer Moscovich</a>, <a href="http://www.cs.brown.edu/~jfh/">John F. Hughes</a>. ACM Transactions on Graphics, 24(3), July 2005, pp. 1134-1141. [<a href="http://www-ui.is.s.u-tokyo.ac.jp/~takeo/research/rigid/index.html">Author's Project Page</a>] [<a href="http://portal.acm.org/citation.cfm?id=1073323&dl=GUIDE&coll=GUIDE&CFID=21759937&CFTOKEN=89304895">ACM DL</a>] </p>
+<p>This simple GLUT application can be used to deform a 2D mesh based on a set of constraint points placed at the mesh vertices using the right mouse button. Once two constraints are placed, the linear equations defining the deformation are automatically precomputed. Then you can move the constraints using the left mouse button. In the example below 4 control points are placed (the red dots) and then moved around. </p>
+<p align="center"><img src="example.png" width="700" height="173"></p>
+<p>By default a square grid of triangles is generated. You can load other triangle meshes in .OBJ format (*) by pressing the 'f' key. Note that the mesh will be projected into the X/Y plane, and the view automatically scaled and translated. Also, if your mesh has lots of vertices (more than a few hundred), the pre-computation will take some time (the implementation here does not use sparse matrices). I have included the example mesh used above, named 'man.obj'.</p>
+<p>The source includes the WildMagic 2 library, of which a tiny part is used. This is an out-of-date version, see <a href="http://www.geometrictools.com">geometrictools.com</a> for the most recent WildMagic library. Note that you can't just drop newer versions, because the namespace and some of the interfaces have changed (but it would not be a lot of work to update this code). </p>
+<p>UI controls:</p>
+<p>right mouse - set / remove control point (control points can only be placed at vertices) <br>
+  left mouse - move control point <br>
+  'f'        - load new .obj mesh</p>
+<p>Source files:</p>
+<p>I wrote this code in 2006 (except for the GLUT interface, which I just hacked up so I wouldn't have to distribute the original GDI app). I don't really remember how it works, and I don't  have time to provide developer support. Good luck! </p>
+<p>Included with the source is a Visual Studio 2005 project file. But the only windows-specific code is the open file dialog, so it should build on other systems (although I haven't tried it). You would have to either replace WildMagic2 or rebuild it for your target platform (it is available for Windows, Linux, and OS X). If you do port it, and are willing, please send me your package and I will post it here. </p>
+<p>Deform2D.cpp contains the GLUT and UI code<br>
+  src\RigidMeshDeformer2D.* implements the paper (sets up matrices, maintains constraints, etc)<br>
+  src\TriangleMesh.* is a basic triangle mesh class<br>
+  src\LinearAlgebra.* is used by the triangle mesh class<br>
+  src\WmlExtLinearSystem.* implements LU decomposition and backsubstitution<br>
+  src\WmlExtTriangleUtils.* implements some triangle utility functions (I think only ::BarycentricCoords is actually used) <br>
+  src\rmsdebug.h is used by debug printing<br>
+  Wml\* is the WildMagic2 library (the compiled DLL is included)</p>
+<p>Other than WildMagic2, this code is free as in beer - you can use it in any commercial product you like (WildMagic2 has a similar license). </p>
+<p>Math: </p>
+<p>These three Mathematica notebooks - <a href="math/transform.nb">transform.nb</a>, <a href="math/scale.nb">scale.nb</a>, <a href="math/assemble.nb">assemble.nb</a> - work out the terms to plug into the matrices. On first glance it is hard to imagine that anyone (including myself) would be able to make any sense of them, but who knows... </p>
+<p>(*) your .OBJ mesh must have face ('f') lines in the form vtx/tex/norm or vtx//norm. Some packages export just the vertex indices, which the OBJ loader can't handle. </p>
+<p>- Ryan Schmidt (<a href="rms@unknownroad.com">rms@unknownroad.com</a>) - Feb 2009 </p>
+<!-- InstanceEndEditable --></td>
+</tr>
+</table>
+
+<!--
+<p>&nbsp;</p>
+<table width="740" border="0" cellspacing="0">
+  <tr>
+  <td height="3" colspan="3"><hr align="left" width=800 noshade></td>
+  </tr>
+  <tr>
+    <td width="100"><a href="../../index.html">Back
+      To<br>
+      RMS @ DGP</a>
+    <td width="629">
+	  <table width="100%" border="0">
+      <tr>
+        <td width="44%"><img src="http://www.dgp.toronto.edu/~rms/images/dcs2.gif" alt="DCS Logo" width="348" height="58" /></td>
+        <td width="56%" align="right"><div align="right"><img src="http://www.dgp.toronto.edu/~rms/images/dgplogo.jpg" alt="DGP Logo" width="147" height="57" /></div></td>
+      </tr>
+      </table>
+	</td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-91729-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+-->
+</body>
+<!-- InstanceEnd -->
+</html>

@@ -13,6 +13,7 @@
 *.hpp text
 *.inl text
 *.mcr text
+*.nb text
 *.c text
 *.h text
 Makefile text

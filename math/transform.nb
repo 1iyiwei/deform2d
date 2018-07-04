@@ -1,0 +1,194 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      5696,        145]*)
+(*NotebookOutlinePosition[      6343,        167]*)
+(*  CellTagsIndexPosition[      6299,        163]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(\(\( (*\ 
+      variables\  - \ 
+        we\ are\ solving\ for\ v\_i\ here\ \
+*) \)\(\[IndentingNewLine]\)\(\(v\_0 = {v\_\(0, x\), 
+          v\_\(0, y\)};\)\[IndentingNewLine]
+    \(v\_1 = {v\_\(1, x\), v\_\(1, y\)};\)\[IndentingNewLine]
+    \(v\_2 = {v\_\(2, x\), v\_\(2, y\)};\)\[IndentingNewLine]
+    \(\(v\^d\)\_2 = {\(v\^d\)\_\(2, x\), \(v\^d\)\_\(2, y\)};\)\
+\[IndentingNewLine]
+    \(Rot90 = {{0, 1}, {\(-1\), 
+            0}};\)\[IndentingNewLine]\[IndentingNewLine] (*\ 
+      error\ equation\ 3\ from\ Igarashi05\  - \ 
+        write\ v\_2\ in\ terms\ of\ v\_0, v\_1\ *) \[IndentingNewLine]
+    \(v\^d\)\_2\  = \ 
+      v\_0\  + \ x \((v\_1 - v\_0)\) + 
+        y \((\ Rot90\  . \ \((v\_1 - v\_0)\))\)\[IndentingNewLine]
+    Ev2\  = \ \((\(v\^d\)\_2 - v\_2)\) . \((\(v\^d\)\_2 - 
+            v\_2)\)\[IndentingNewLine]\[IndentingNewLine] (*\ 
+      compute\ partials\ wrt\ free\ variables, \ 
+      which\ get\ solved\ for\  \[Equal] \ 
+        0\ \((Eqn7)\)\ *) \[IndentingNewLine]
+    \(Ev01\  = \ D[Ev2, \ v\_\(0, x\)];\)\[IndentingNewLine]
+    \(Ev02\  = \ D[Ev2, \ v\_\(0, y\)];\)\[IndentingNewLine]
+    \(Ev03\  = \ D[Ev2, \ v\_\(1, x\)];\)\[IndentingNewLine]
+    \(Ev04\  = \ D[Ev2, \ v\_\(1, y\)];\)\[IndentingNewLine]
+    \(Ev05\  = \ D[Ev2, \ v\_\(2, x\)];\)\[IndentingNewLine]
+    \(Ev06\  = \ D[Ev2, \ v\_\(2, y\)];\)\)\)\)], "Input"],
+
+Cell[BoxData[
+    \({v\_\(0, x\) + x\ \((\(-v\_\(0, x\)\) + v\_\(1, x\))\) + 
+        y\ \((\(-v\_\(0, y\)\) + v\_\(1, y\))\), 
+      v\_\(0, y\) + y\ \((v\_\(0, x\) - v\_\(1, x\))\) + 
+        x\ \((\(-v\_\(0, y\)\) + v\_\(1, y\))\)}\)], "Output"],
+
+Cell[BoxData[
+    \(\((v\_\(0, x\) + x\ \((\(-v\_\(0, x\)\) + v\_\(1, x\))\) + y\ \((\(-v\_\
+\(0, y\)\) + v\_\(1, y\))\) - v\_\(2, x\))\)\^2 + \((v\_\(0, y\) + y\ \
+\((v\_\(0, x\) - v\_\(1, x\))\) + x\ \((\(-v\_\(0, y\)\) + v\_\(1, y\))\) - v\
+\_\(2, y\))\)\^2\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\(\[IndentingNewLine]\)\( (*\ 
+      these\ coefficients\ are\ accumulated\ in\ the\ matrix\ G\ \((Eqn6)\) . \
+\ Store\ each\ one\ at\ element\ \((i, j)\)\ where\ i\  \[Equal] \ 
+        row\ for\ derivative\ v\_\(i, x | y\)\ and\ j\  \[Equal] \ 
+        column\ for\ coefficient\ v\_\(j, x | y\)\ *) \)\(\[IndentingNewLine]\
+\)\(\[IndentingNewLine]\)\(Coefficient[\ 
+      ExpandAll[Ev01], \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), v\_\(1, y\), 
+        v\_\(2, x\), v\_\(2, y\)}]\[IndentingNewLine]
+    Coefficient[\ 
+      ExpandAll[Ev02], \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), v\_\(1, y\), 
+        v\_\(2, x\), v\_\(2, y\)}]\[IndentingNewLine]
+    Coefficient[\ 
+      ExpandAll[Ev03], \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), v\_\(1, y\), 
+        v\_\(2, x\), v\_\(2, y\)}]\[IndentingNewLine]
+    Coefficient[\ 
+      ExpandAll[Ev04], \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), v\_\(1, y\), 
+        v\_\(2, x\), v\_\(2, y\)}]\[IndentingNewLine]
+    Coefficient[\ 
+      ExpandAll[Ev05], \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), v\_\(1, y\), 
+        v\_\(2, x\), v\_\(2, y\)}]\[IndentingNewLine]
+    Coefficient[\ 
+      ExpandAll[Ev06], \ {v\_\(0, x\), v\_\(0, y\), v\_\(1, x\), v\_\(1, y\), 
+        v\_\(2, x\), v\_\(2, y\)}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \({2 - 4\ x + 2\ x\^2 + 2\ y\^2, 0, 2\ x - 2\ x\^2 - 2\ y\^2, 
+      2\ y, \(-2\) + 2\ x, \(-2\)\ y}\)], "Output"],
+
+Cell[BoxData[
+    \({0, 2 - 4\ x + 2\ x\^2 + 2\ y\^2, \(-2\)\ y, 2\ x - 2\ x\^2 - 2\ y\^2, 
+      2\ y, \(-2\) + 2\ x}\)], "Output"],
+
+Cell[BoxData[
+    \({2\ x - 2\ x\^2 - 2\ y\^2, \(-2\)\ y, 2\ x\^2 + 2\ y\^2, 0, \(-2\)\ x, 
+      2\ y}\)], "Output"],
+
+Cell[BoxData[
+    \({2\ y, 2\ x - 2\ x\^2 - 2\ y\^2, 0, 
+      2\ x\^2 + 2\ y\^2, \(-2\)\ y, \(-2\)\ x}\)], "Output"],
+
+Cell[BoxData[
+    \({\(-2\) + 2\ x, 2\ y, \(-2\)\ x, \(-2\)\ y, 2, 0}\)], "Output"],
+
+Cell[BoxData[
+    \({\(-2\)\ y, \(-2\) + 2\ x, 2\ y, \(-2\)\ x, 0, 2}\)], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1454}, {0, 977}},
+WindowSize->{1045, 854},
+WindowMargins->{{Automatic, 94}, {Automatic, -11}}
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 1377, 27, 477, "Input"],
+Cell[3156, 82, 248, 4, 34, "Output"],
+Cell[3407, 88, 274, 4, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3718, 97, 1280, 23, 295, "Input"],
+Cell[5001, 122, 132, 2, 35, "Output"],
+Cell[5136, 126, 132, 2, 35, "Output"],
+Cell[5271, 130, 117, 2, 35, "Output"],
+Cell[5391, 134, 117, 2, 35, "Output"],
+Cell[5511, 138, 83, 1, 34, "Output"],
+Cell[5597, 141, 83, 1, 34, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+
